@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --stone-050: #faf9f4;
+  --stone-100: #f4f2e9;
+  --sand-200: #eae6d6;
+  --ink-900: #1c1b17;
+  --ink-600: #57564c;
+  --grey-400: #9c9c93;
+  --line: rgba(28, 27, 23, 0.1);
+  --line-light: rgba(250, 249, 244, 0.18);
+}
+
+/* Dark mode override — semantic surfaces flip, brand colors (pine/sage/brass) stay fixed */
+html[data-theme='dark'] {
+  --stone-050: #151f10;
+  --stone-100: #1a2415;
+  --sand-200: #1e2a18;
+  --ink-900: #f2f0e6;
+  --ink-600: #bcbcae;
+  --grey-400: #8a8a80;
+  --line: rgba(242, 240, 230, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--ink-900);
+  background: var(--stone-050);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color 0.4s cubic-bezier(0.22, 0.68, 0, 1),
+    color 0.4s cubic-bezier(0.22, 0.68, 0, 1);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+.font-serif {
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+}
+
+/* Signature arc-draw motif used for section-head underlines */
+.arc-path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+/* Scroll-reveal base state (GSAP fades these in — see RevealOnScroll) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
