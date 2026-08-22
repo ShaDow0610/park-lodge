@@ -107,8 +107,7 @@ export default function Hero() {
         <div
           className="hero-bg-img absolute inset-0 h-full w-full bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('https://1drv.ms/i/c/d382409d68f9dc87/IQBFzcc_A5kdR6vizLNDvyNqAZX2aZ5V8KX8VTYypvedMuE?e=cf3Zr2')",
+            backgroundImage: "url('/images/_MG_9987_8PM.jpg')",
           }}
         />
         <div
