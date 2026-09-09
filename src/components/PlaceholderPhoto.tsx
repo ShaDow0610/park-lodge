@@ -28,7 +28,7 @@ export default function PlaceholderPhoto({
 
   return (
     <div
-      className={`relative overflow-hidden flex items-end text-stone-50 ${aspect} ${className}`}
+      className={`group relative overflow-hidden flex items-end text-stone-50 ${aspect} ${className}`}
       style={{
         background: isLight
           ? 'linear-gradient(155deg, var(--sand-200) 0%, var(--stone-100) 60%, #a9c088 140%)'
@@ -37,7 +37,7 @@ export default function PlaceholderPhoto({
     >
       <span
         aria-hidden="true"
-        className="absolute rounded-full"
+        className="absolute rounded-full transition-transform duration-[1200ms] ease-signature group-hover:scale-105"
         style={{
           width: '160%',
           height: '160%',

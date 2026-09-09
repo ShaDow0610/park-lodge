@@ -62,7 +62,7 @@ export default function ContactForm() {
       />
       <button
         type="submit"
-        className="mt-3 inline-flex w-fit items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950 transition-colors hover:bg-brass-300">
+        className="btn-shine mt-3 inline-flex w-fit items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950">
         Send Enquiry
       </button>
     </form>

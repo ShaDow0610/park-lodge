@@ -52,7 +52,7 @@ export default function BookingWidget() {
         </label>
         <button
           type="submit"
-          className="col-span-full flex items-center justify-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-[26px] py-3.5 text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950 transition-colors hover:bg-brass-300 sm:col-span-2 md:col-span-1"
+          className="btn-shine col-span-full flex items-center justify-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-[26px] py-3.5 text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950 sm:col-span-2 md:col-span-1"
         >
           <FontAwesomeIcon icon={faMagnifyingGlass} className="h-3.5 w-3.5" /> Check Availability
         </button>

@@ -32,6 +32,8 @@ export default function RevealOnScroll({
       const items = scope.current.querySelectorAll('.reveal');
       if (!items.length) return;
 
+      gsap.set(items, { scale: 0.98 });
+
       ScrollTrigger.batch(items, {
         start: 'top 88%',
         once: true,
@@ -39,8 +41,9 @@ export default function RevealOnScroll({
           gsap.to(batch, {
             opacity: 1,
             y: 0,
-            duration: 0.8,
-            ease: 'power2.out',
+            scale: 1,
+            duration: 0.9,
+            ease: 'power3.out',
             stagger: 0.1,
             overwrite: true,
           }),

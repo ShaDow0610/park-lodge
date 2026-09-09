@@ -18,6 +18,8 @@ import BookingWidget from '@/components/BookingWidget';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import SectionHead from '@/components/SectionHead';
 import PlaceholderPhoto from '@/components/PlaceholderPhoto';
+import CountUp from '@/components/CountUp';
+import RoomsTrack from '@/components/RoomsTrack';
 
 const MARKET_TAGS = [
   'Corporate Travellers',
@@ -131,11 +133,11 @@ export default function HomePage() {
             </div>
             <div className="mt-9 flex flex-wrap gap-x-11 gap-y-8 border-t border-line pt-7">
               <div className="flex min-w-[120px] flex-col gap-1">
-                <span className="font-serif text-3xl text-pine-800">3</span>
+                <CountUp to={3} className="font-serif text-3xl text-pine-800" />
                 <span className="text-[11px] uppercase tracking-[0.08em] text-grey-400">Room Categories</span>
               </div>
               <div className="flex min-w-[120px] flex-col gap-1">
-                <span className="font-serif text-3xl text-pine-800">10</span>
+                <CountUp to={10} className="font-serif text-3xl text-pine-800" />
                 <span className="text-[11px] uppercase tracking-[0.08em] text-grey-400">Facilities &amp; Services</span>
               </div>
               <div className="flex min-w-[120px] flex-col gap-1">
@@ -163,31 +165,33 @@ export default function HomePage() {
               </p>
             }
           />
-          <RevealOnScroll className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
-            {ROOMS.map((room) => (
-              <div key={room.name} className="reveal">
-                <PlaceholderPhoto label={room.name} tag="Sample image" aspect="aspect-[4/5]" className="rounded-sm" />
-                <div className="pt-[22px]">
-                  <div className="mb-2 font-serif text-[21px]">{room.name}</div>
-                  <div className="mb-3 flex flex-wrap gap-3.5 text-xs text-ink-600">
-                    <span>Size TBC</span>
-                    <span>Sleeps TBC</span>
-                    <span>Bed config TBC</span>
+          <RevealOnScroll>
+            <RoomsTrack>
+              {ROOMS.map((room) => (
+                <div key={room.name} className="reveal md:w-[min(38vw,420px)] md:shrink-0">
+                  <PlaceholderPhoto label={room.name} tag="Sample image" aspect="aspect-[4/5]" className="rounded-sm" />
+                  <div className="pt-[22px]">
+                    <div className="mb-2 font-serif text-[21px]">{room.name}</div>
+                    <div className="mb-3 flex flex-wrap gap-3.5 text-xs text-ink-600">
+                      <span>Size TBC</span>
+                      <span>Sleeps TBC</span>
+                      <span>Bed config TBC</span>
+                    </div>
+                    <p className="text-sm font-light leading-snug text-ink-600">{room.usp}</p>
+                    <Link
+                      href="/contact"
+                      className="group mt-3.5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.06em] text-pine-800"
+                    >
+                      Enquire
+                      <FontAwesomeIcon
+                        icon={faArrowRight}
+                        className="h-3 w-3 text-brass-500 transition-transform group-hover:translate-x-1"
+                      />
+                    </Link>
                   </div>
-                  <p className="text-sm font-light leading-snug text-ink-600">{room.usp}</p>
-                  <Link
-                    href="/contact"
-                    className="group mt-3.5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.06em] text-pine-800"
-                  >
-                    Enquire
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className="h-3 w-3 text-brass-500 transition-transform group-hover:translate-x-1"
-                    />
-                  </Link>
                 </div>
-              </div>
-            ))}
+              ))}
+            </RoomsTrack>
           </RevealOnScroll>
           <div className="mt-10 text-center">
             <Link

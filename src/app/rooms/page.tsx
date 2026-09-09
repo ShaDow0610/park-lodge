@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import type { Metadata } from 'next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -11,6 +10,8 @@ import {
 import PageHeader from '@/components/PageHeader';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import PlaceholderPhoto from '@/components/PlaceholderPhoto';
+import MagneticButton from '@/components/MagneticButton';
+import ArcSignature from '@/components/ArcSignature';
 
 export const metadata: Metadata = {
   title: 'Rooms & Suites — The Park Lodge Hotel and Apartments',
@@ -67,6 +68,7 @@ export default function RoomsPage() {
                 <PlaceholderPhoto label={room.name} tag="Sample image" aspect="aspect-[4/3]" className="rounded-sm" />
               </div>
               <div className="reveal">
+                <ArcSignature />
                 <span className="text-xs font-semibold uppercase tracking-[0.22em] text-brass-500">
                   Category 0{i + 1}
                 </span>
@@ -86,13 +88,13 @@ export default function RoomsPage() {
                 </div>
                 <p className="mt-6 max-w-[46ch] text-[16px] font-light leading-[1.75] text-ink-600">{room.usp}</p>
                 <p className="mt-3 max-w-[46ch] text-sm italic text-ink-600/70">{room.fit}</p>
-                <Link
+                <MagneticButton
                   href="/contact"
-                  className="group mt-8 inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950 transition-colors hover:bg-brass-300"
+                  className="btn-shine group mt-8 inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950"
                 >
                   Enquire About This Room
                   <FontAwesomeIcon icon={faArrowRight} className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-                </Link>
+                </MagneticButton>
               </div>
             </RevealOnScroll>
           ))}
@@ -133,12 +135,12 @@ export default function RoomsPage() {
               availability directly.
             </p>
           </div>
-          <Link
+          <MagneticButton
             href="/contact"
-            className="reveal inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950 transition-colors hover:bg-brass-300"
+            className="btn-shine reveal inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950"
           >
             Check Availability
-          </Link>
+          </MagneticButton>
         </RevealOnScroll>
       </section>
     </>

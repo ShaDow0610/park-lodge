@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import Link from "next/link";
+import Image from "next/image";
+import MagneticButton from "./MagneticButton";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -104,11 +105,15 @@ export default function Hero() {
       ref={rootRef}
       className="relative flex min-h-screen items-center overflow-hidden pb-20 pt-[120px]">
       <div className="absolute inset-0 z-0">
-        <div
-          className="hero-bg-img absolute inset-0 h-full w-full bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/images/_MG_9987_8PM.jpg')",
-          }}
+        <Image
+          src="/images/hero.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EACUQAAIBAwMCBwAAAAAAAAAAAAECAwAREgQFIRUxI0FRYXKBkf/EABYBAQEBAAAAAAAAAAAAAAAAAAIBA//EABwRAAMAAQUAAAAAAAAAAAAAAAABAgMSEyIxQf/aAAwDAQACEQMRAD8Aig3B1ABOXyHNNOtfIljZRbgLVEkK6GAYyKXt27k/dJ6jIqNkos4t5Gxoxkq1xNmku0Zl3KNSPCJB96KYdykKojLG/qML3/KKu/S8Dok//9k="
+          className="hero-bg-img object-cover"
         />
         <div
           className="absolute inset-0"
@@ -157,11 +162,11 @@ export default function Hero() {
             that pays attention to the details.
           </p>
           <div className="hero-anim mt-10 flex flex-wrap gap-4">
-            <Link
+            <MagneticButton
               href="/contact"
-              className="inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950 transition-colors hover:bg-brass-300">
+              className="btn-shine inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950">
               Check Availability
-            </Link>
+            </MagneticButton>
             <a
               href="#about"
               className="inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm border border-line-light px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-stone-50 transition-colors hover:border-brass-300 hover:text-brass-300">

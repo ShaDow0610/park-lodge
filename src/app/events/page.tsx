@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import type { Metadata } from 'next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -15,6 +14,8 @@ import {
 import PageHeader from '@/components/PageHeader';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import PlaceholderPhoto from '@/components/PlaceholderPhoto';
+import MagneticButton from '@/components/MagneticButton';
+import ArcSignature from '@/components/ArcSignature';
 
 export const metadata: Metadata = {
   title: 'Meetings & Events — The Park Lodge Hotel and Apartments',
@@ -53,6 +54,7 @@ export default function EventsPage() {
             <PlaceholderPhoto label="Conference Venues" tag="Sample image" aspect="aspect-[4/5]" className="rounded-sm" />
           </div>
           <div className="reveal">
+            <ArcSignature />
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-brass-500">
               Venue &amp; Facilities
             </span>
@@ -76,13 +78,13 @@ export default function EventsPage() {
                 Content pending
               </span>
             </div>
-            <Link
+            <MagneticButton
               href="/contact"
-              className="group mt-9 inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950 transition-colors hover:bg-brass-300"
+              className="btn-shine group mt-9 inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950"
             >
               Request a Quote
               <FontAwesomeIcon icon={faArrowRight} className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-            </Link>
+            </MagneticButton>
           </div>
         </RevealOnScroll>
       </section>
@@ -90,13 +92,17 @@ export default function EventsPage() {
       {/* SUITED FOR */}
       <section className="bg-pine-950 py-20 text-stone-50 md:py-24">
         <div className="mx-auto max-w-wrap px-8">
-          <RevealOnScroll className="reveal mb-12 text-center">
+          <RevealOnScroll className="reveal mb-12 flex flex-col items-center text-center">
+            <ArcSignature />
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-sage-300">Who We Host</span>
             <h2 className="mt-3 font-serif text-[clamp(26px,3vw,36px)] text-stone-50">Suited for</h2>
           </RevealOnScroll>
           <RevealOnScroll className="grid grid-cols-2 gap-6 sm:grid-cols-4">
             {SUITED_FOR.map((item) => (
-              <div key={item.label} className="reveal flex flex-col items-center gap-3.5 border border-line-light p-7 text-center">
+              <div
+                key={item.label}
+                className="reveal flex flex-col items-center gap-3.5 border border-line-light p-7 text-center transition-colors duration-300 hover:border-brass-300"
+              >
                 <FontAwesomeIcon icon={item.icon} className="h-6 w-6 text-brass-300" />
                 <span className="text-[13px] font-medium text-stone-50">{item.label}</span>
               </div>
@@ -108,7 +114,8 @@ export default function EventsPage() {
       {/* AVAILABLE ON REQUEST */}
       <section className="bg-sand-200 py-20 md:py-24">
         <div className="mx-auto max-w-wrap px-8">
-          <RevealOnScroll className="reveal mb-12 text-center">
+          <RevealOnScroll className="reveal mb-12 flex flex-col items-center text-center">
+            <ArcSignature />
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-brass-500">
               Available On Request
             </span>
@@ -118,7 +125,10 @@ export default function EventsPage() {
           </RevealOnScroll>
           <RevealOnScroll className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4">
             {AVAILABLE.map((item) => (
-              <div key={item.label} className="reveal flex flex-col gap-3.5 border-t-2 border-brass-500 bg-stone-50 p-8">
+              <div
+                key={item.label}
+                className="reveal flex flex-col gap-3.5 border-t-2 border-brass-500 bg-stone-50 p-8 transition-[transform,box-shadow] duration-500 ease-signature hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-24px_rgba(20,31,16,0.25)]"
+              >
                 <FontAwesomeIcon icon={item.icon} className="h-6 w-6 text-pine-800" />
                 <div className="font-serif text-lg text-ink-900">{item.label}</div>
                 <p className="text-[14px] font-light leading-relaxed text-ink-600">{item.desc}</p>
@@ -140,12 +150,12 @@ export default function EventsPage() {
               and catering.
             </p>
           </div>
-          <Link
+          <MagneticButton
             href="/contact"
-            className="reveal inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950 transition-colors hover:bg-brass-300"
+            className="btn-shine reveal inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950"
           >
             Request a Quote
-          </Link>
+          </MagneticButton>
         </RevealOnScroll>
       </section>
     </>

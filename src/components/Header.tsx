@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import LogoMark from './LogoMark';
 
 const NAV_LINKS = [
   { href: '/rooms', label: 'Rooms & Suites' },
@@ -31,6 +32,13 @@ export default function Header() {
     setMenuOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    document.documentElement.style.overflow = menuOpen ? 'hidden' : '';
+    return () => {
+      document.documentElement.style.overflow = '';
+    };
+  }, [menuOpen]);
+
   function toggleTheme() {
     const next = !isDark;
     setIsDark(next);
@@ -47,9 +55,7 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-wrap items-center justify-between gap-6 px-8">
         <Link href="/" className="flex items-center gap-3">
-          <span className="flex h-[38px] w-[38px] items-center justify-center rounded-lg bg-gradient-to-br from-pine-700 to-sage-500 font-serif text-sm text-stone-50">
-            PL
-          </span>
+          <LogoMark className="h-[38px] w-[38px] shrink-0 rounded-lg" />
           <span className="font-serif text-[17px] leading-[1.15] text-stone-50">
             The Park Lodge
             <span className="mt-0.5 block font-sans text-[9.5px] uppercase tracking-[0.24em] text-sage-300">
@@ -58,18 +64,26 @@ export default function Header() {
           </span>
         </Link>
 
+        <div
+          aria-hidden="true"
+          onClick={() => setMenuOpen(false)}
+          className={`fixed inset-0 z-[105] bg-pine-950/50 backdrop-blur-[2px] transition-opacity duration-300 lg:hidden ${
+            menuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
+          }`}
+        />
+
         <nav
           id="navLinks"
-          className={`fixed inset-x-0 top-full flex flex-col gap-6 bg-pine-950 p-8 transition-transform duration-300 md:static md:flex-row md:items-center md:gap-[34px] md:bg-transparent md:p-0 md:transition-none ${
-            menuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
+          className={`fixed inset-y-0 right-0 z-[110] flex w-[78%] max-w-xs flex-col gap-6 bg-pine-950 px-8 pb-8 pt-28 transition-transform duration-[450ms] ease-signature lg:static lg:z-auto lg:w-auto lg:max-w-none lg:flex-row lg:items-center lg:gap-8 lg:bg-transparent lg:p-0 lg:transition-none ${
+            menuOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'
           }`}
         >
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-[13px] tracking-[0.04em] text-stone-50 opacity-80 transition-opacity hover:opacity-100 ${
-                pathname === link.href ? 'opacity-100' : ''
+              className={`relative text-[13px] tracking-[0.04em] text-stone-50 opacity-80 transition-opacity after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-brass-300 after:transition-[width] after:duration-300 after:ease-signature hover:opacity-100 hover:after:w-full ${
+                pathname === link.href ? 'opacity-100 after:w-full' : ''
               }`}
             >
               {link.label}
@@ -87,14 +101,14 @@ export default function Header() {
           </button>
           <Link
             href="/contact"
-            className="hidden items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950 transition-colors hover:bg-brass-300 md:inline-flex"
+            className="btn-shine hidden items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950 lg:inline-flex"
           >
             Book Now
           </Link>
           <button
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Toggle menu"
-            className="flex h-8 w-8 flex-col items-center justify-center gap-1.5 md:hidden"
+            className="flex h-8 w-8 flex-col items-center justify-center gap-1.5 lg:hidden"
           >
             <span
               className={`block h-[1.5px] w-5 bg-stone-50 transition-transform ${

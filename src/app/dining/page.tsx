@@ -13,6 +13,8 @@ import {
 import PageHeader from '@/components/PageHeader';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import PlaceholderPhoto from '@/components/PlaceholderPhoto';
+import MagneticButton from '@/components/MagneticButton';
+import ArcSignature from '@/components/ArcSignature';
 
 export const metadata: Metadata = {
   title: 'Dining — Café on Park | The Park Lodge Hotel and Apartments',
@@ -57,6 +59,7 @@ export default function DiningPage() {
             <PlaceholderPhoto label="Café on Park" tag="Sample image" aspect="aspect-[4/5]" className="rounded-sm" />
           </div>
           <div className="reveal order-1 md:order-2">
+            <ArcSignature />
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-brass-500">
               On-Site Dining
             </span>
@@ -92,7 +95,8 @@ export default function DiningPage() {
       {/* SERVICES */}
       <section className="bg-sand-200 py-20 md:py-24">
         <div className="mx-auto max-w-wrap px-8">
-          <RevealOnScroll className="reveal mb-12 text-center">
+          <RevealOnScroll className="reveal mb-12 flex flex-col items-center text-center">
+            <ArcSignature />
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-brass-500">
               Beyond The Table
             </span>
@@ -100,7 +104,10 @@ export default function DiningPage() {
           </RevealOnScroll>
           <RevealOnScroll className="grid grid-cols-1 gap-7 sm:grid-cols-2">
             {SERVICES.map((s) => (
-              <div key={s.title} className="reveal flex flex-col gap-4 border-t-2 border-brass-500 bg-stone-50 p-9">
+              <div
+                key={s.title}
+                className="reveal flex flex-col gap-4 border-t-2 border-brass-500 bg-stone-50 p-9 transition-[transform,box-shadow] duration-500 ease-signature hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-24px_rgba(20,31,16,0.25)]"
+              >
                 <FontAwesomeIcon icon={s.icon} className="h-6 w-6 text-pine-800" />
                 <div className="font-serif text-xl text-ink-900">{s.title}</div>
                 <p className="text-[14.5px] font-light leading-relaxed text-ink-600">{s.desc}</p>
@@ -121,12 +128,12 @@ export default function DiningPage() {
               Ask us about the sample menu, or request catering as part of a conference or event booking.
             </p>
           </div>
-          <Link
+          <MagneticButton
             href="/contact"
-            className="reveal inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950 transition-colors hover:bg-brass-300"
+            className="btn-shine reveal inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950"
           >
             Send An Enquiry
-          </Link>
+          </MagneticButton>
         </RevealOnScroll>
       </section>
     </>

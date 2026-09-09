@@ -6,6 +6,7 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import PageHeader from '@/components/PageHeader';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import ContactForm from '@/components/ContactForm';
+import ArcSignature from '@/components/ArcSignature';
 
 export const metadata: Metadata = {
   title: 'Contact — The Park Lodge Hotel and Apartments',
@@ -27,11 +28,12 @@ export default function ContactPage() {
         <RevealOnScroll className="mx-auto grid max-w-wrap grid-cols-1 gap-16 px-8 md:grid-cols-2 md:gap-[70px]">
           {/* CONTACT DETAILS */}
           <div className="reveal">
+            <ArcSignature color="#a9c088" />
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-sage-300">Contact Details</span>
             <h2 className="mt-4 font-serif text-2xl text-stone-50">Reach our reservations team</h2>
 
             <div className="mt-8 flex flex-col gap-[22px]">
-              <div className="flex items-start gap-4 border-t border-line-light pt-[18px]">
+              <div className="group flex items-start gap-4 border-t border-line-light pt-[18px] transition-transform duration-300 hover:translate-x-1">
                 <FontAwesomeIcon icon={faLocationDot} className="mt-0.5 h-[18px] w-[18px] shrink-0 text-brass-300" />
                 <div>
                   <div className="mb-1 flex items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-grey-400">
@@ -46,7 +48,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 border-t border-line-light pt-[18px]">
+              <div className="group flex items-start gap-4 border-t border-line-light pt-[18px] transition-transform duration-300 hover:translate-x-1">
                 <FontAwesomeIcon icon={faPhone} className="mt-0.5 h-[18px] w-[18px] shrink-0 text-brass-300" />
                 <div>
                   <div className="mb-1 text-[11px] uppercase tracking-[0.14em] text-grey-400">Telephone</div>
@@ -62,7 +64,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 border-t border-line-light pt-[18px]">
+              <div className="group flex items-start gap-4 border-t border-line-light pt-[18px] transition-transform duration-300 hover:translate-x-1">
                 <FontAwesomeIcon icon={faWhatsapp} className="mt-0.5 h-[18px] w-[18px] shrink-0 text-brass-300" />
                 <div>
                   <div className="mb-1 text-[11px] uppercase tracking-[0.14em] text-grey-400">WhatsApp</div>
@@ -79,13 +81,17 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 border-t border-line-light pt-[18px]">
+              <div className="group flex items-start gap-4 border-t border-line-light pt-[18px] transition-transform duration-300 hover:translate-x-1">
                 <FontAwesomeIcon icon={faEnvelope} className="mt-0.5 h-[18px] w-[18px] shrink-0 text-brass-300" />
                 <div>
                   <div className="mb-1 text-[11px] uppercase tracking-[0.14em] text-grey-400">Reservations</div>
-                  <div className="text-[15.5px] text-stone-50">
+                  <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 break-words text-[15.5px] text-stone-50">
                     <a href="mailto:reservations@theparklodge.co.za" className="hover:text-brass-300">
                       reservations@theparklodge.co.za
+                    </a>
+                    <span className="text-stone-50/40">/</span>
+                    <a href="mailto:reception@theparklodge.co.za" className="hover:text-brass-300">
+                      reception@theparklodge.co.za
                     </a>
                   </div>
                 </div>
@@ -95,6 +101,7 @@ export default function ContactPage() {
 
           {/* ENQUIRY FORM */}
           <div className="reveal">
+            <ArcSignature color="#a9c088" />
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-sage-300">
               Send An Enquiry
             </span>
@@ -109,9 +116,12 @@ export default function ContactPage() {
 
         {/* MAP */}
         <RevealOnScroll className="mx-auto mt-16 max-w-wrap px-8">
-          <div className="reveal flex h-[240px] items-center justify-center rounded-sm border border-line-light bg-pine-950">
+          <div className="reveal group flex h-[240px] items-center justify-center overflow-hidden rounded-sm border border-line-light bg-pine-950">
             <div className="flex flex-col items-center gap-2.5 text-center text-stone-50/50">
-              <FontAwesomeIcon icon={faLocationDot} className="h-6 w-6 text-brass-300" />
+              <FontAwesomeIcon
+                icon={faLocationDot}
+                className="h-6 w-6 text-brass-300 transition-transform duration-500 ease-signature group-hover:-translate-y-1"
+              />
               <span className="text-[13px]">Google Maps embed — pending confirmed address</span>
             </div>
           </div>

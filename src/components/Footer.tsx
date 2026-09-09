@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import LogoMark from './LogoMark';
 
 export default function Footer() {
   return (
@@ -8,9 +9,7 @@ export default function Footer() {
       <div className="mx-auto max-w-wrap px-8">
         <div className="flex flex-wrap items-start justify-between gap-10 border-b border-line-light pb-11">
           <div className="flex items-center gap-3">
-            <span className="flex h-[38px] w-[38px] items-center justify-center rounded-lg bg-gradient-to-br from-pine-700 to-sage-500 font-serif text-sm text-stone-50">
-              PL
-            </span>
+            <LogoMark className="h-[38px] w-[38px] shrink-0 rounded-lg" />
             <span className="font-serif text-[17px] leading-[1.15] text-stone-50">
               The Park Lodge
               <span className="mt-0.5 block font-sans text-[9.5px] uppercase tracking-[0.24em] text-sage-300">

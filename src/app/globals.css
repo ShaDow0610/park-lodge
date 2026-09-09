@@ -59,6 +59,26 @@ h3,
   line-height: 1.05;
 }
 
+/* Primary-button fill sweep on hover */
+.btn-shine {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.btn-shine::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #d3ac78;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.22, 0.68, 0, 1);
+}
+.btn-shine:hover::before {
+  transform: scaleX(1);
+}
+
 /* Signature arc-draw motif used for section-head underlines */
 .arc-path {
   stroke-dasharray: 100;

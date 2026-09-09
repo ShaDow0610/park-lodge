@@ -24,7 +24,7 @@ export default function StickyBookBar() {
       </span>
       <Link
         href="/contact"
-        className="whitespace-nowrap rounded-sm bg-brass-500 px-[22px] py-[11px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950 transition-colors hover:bg-brass-300"
+        className="btn-shine whitespace-nowrap rounded-sm bg-brass-500 px-[22px] py-[11px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950"
       >
         Book Now
       </Link>
