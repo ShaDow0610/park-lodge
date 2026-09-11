@@ -64,6 +64,11 @@ h3,
   position: relative;
   z-index: 1;
   overflow: hidden;
+  /* overflow other than "visible" resets a flex item's automatic min-width
+     to 0, which lets flex containers shrink these buttons below their
+     label's width (clipping the text) when space is tight — pin it back
+     to content size. */
+  flex-shrink: 0;
 }
 .btn-shine::before {
   content: '';

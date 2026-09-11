@@ -33,9 +33,36 @@ export default function Header() {
   }, [pathname]);
 
   useEffect(() => {
-    document.documentElement.style.overflow = menuOpen ? 'hidden' : '';
+    if (!menuOpen) return;
+
+    // Lock scroll by pinning <body> in place rather than just toggling
+    // overflow:hidden — on iOS Safari, applying overflow:hidden while the
+    // page is already scrolled breaks position:fixed rendering (the drawer
+    // paints as if empty/see-through below the fold). Freezing the body's
+    // position and restoring the scroll offset on close avoids that.
+    const scrollY = window.scrollY;
+    const { body } = document;
+    const prev = {
+      position: body.style.position,
+      top: body.style.top,
+      left: body.style.left,
+      right: body.style.right,
+      width: body.style.width,
+    };
+
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}px`;
+    body.style.left = '0';
+    body.style.right = '0';
+    body.style.width = '100%';
+
     return () => {
-      document.documentElement.style.overflow = '';
+      body.style.position = prev.position;
+      body.style.top = prev.top;
+      body.style.left = prev.left;
+      body.style.right = prev.right;
+      body.style.width = prev.width;
+      window.scrollTo(0, scrollY);
     };
   }, [menuOpen]);
 
@@ -76,7 +103,7 @@ export default function Header() {
 
         <nav
           id="navLinks"
-          className={`fixed inset-y-0 right-0 z-[110] flex w-[78%] max-w-xs flex-col gap-6 bg-pine-950 px-8 pb-8 pt-28 transition-transform duration-[450ms] ease-signature lg:static lg:z-auto lg:w-auto lg:max-w-none lg:flex-row lg:items-center lg:gap-8 lg:bg-transparent lg:p-0 lg:transition-none ${
+          className={`fixed inset-y-0 right-0 z-[110] flex w-[78%] max-w-xs flex-col gap-6 bg-pine-950 px-8 pb-8 pt-28 transition-transform duration-[450ms] ease-signature will-change-transform lg:static lg:z-auto lg:w-auto lg:max-w-none lg:flex-row lg:items-center lg:gap-8 lg:bg-transparent lg:p-0 lg:transition-none ${
             menuOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'
           }`}
         >
