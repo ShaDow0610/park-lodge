@@ -28,7 +28,7 @@ export default function PlaceholderPhoto({
 
   return (
     <div
-      className={`group relative overflow-hidden flex items-end text-stone-50 ${aspect} ${className}`}
+      className={`group relative overflow-hidden flex items-end text-ivory ${aspect} ${className}`}
       style={{
         background: isLight
           ? 'linear-gradient(155deg, var(--sand-200) 0%, var(--stone-100) 60%, #a9c088 140%)'
@@ -59,7 +59,7 @@ export default function PlaceholderPhoto({
         <div className="relative z-[2] flex w-full items-end justify-between p-[22px]">
           {label && <span className="font-serif text-[17px]">{label}</span>}
           {tag && (
-            <span className="flex items-center gap-1.5 text-[9.5px] uppercase tracking-[0.14em] text-stone-50/65">
+            <span className="flex items-center gap-1.5 text-[10.5px] uppercase tracking-[0.1em] text-ivory/75">
               <FontAwesomeIcon icon={faCamera} className="h-3 w-3" />
               {tag}
             </span>

@@ -15,10 +15,10 @@ export default function ContactForm() {
   if (sent) {
     return (
       <div className="rounded-sm border border-line-light bg-pine-900/40 p-8">
-        <p className="font-serif text-xl text-stone-50">
+        <p className="font-serif text-xl text-ivory">
           Thank you — your enquiry has been noted.
         </p>
-        <p className="mt-2 text-sm text-stone-50/60">
+        <p className="mt-2 text-sm text-ivory/60">
           This is a prototype form with no backend connected yet, so nothing was
           actually sent. Once reservations@ is wired up, this message will
           confirm a real enquiry has gone through.
@@ -34,31 +34,31 @@ export default function ContactForm() {
           type="text"
           placeholder="Full name"
           required
-          className="w-full border-0 border-b border-line-light bg-transparent py-3 text-[15px] text-stone-50 placeholder:text-stone-50/40 outline-none focus:border-brass-300"
+          className="w-full border-0 border-b border-line-light bg-transparent py-3 text-[15px] text-ivory placeholder:text-ivory/40 outline-none focus:border-brass-300"
         />
         <input
           type="email"
           placeholder="Email address"
           required
-          className="w-full border-0 border-b border-line-light bg-transparent py-3 text-[15px] text-stone-50 placeholder:text-stone-50/40 outline-none focus:border-brass-300"
+          className="w-full border-0 border-b border-line-light bg-transparent py-3 text-[15px] text-ivory placeholder:text-ivory/40 outline-none focus:border-brass-300"
         />
       </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <input
           type="tel"
           placeholder="Phone / WhatsApp"
-          className="w-full border-0 border-b border-line-light bg-transparent py-3 text-[15px] text-stone-50 placeholder:text-stone-50/40 outline-none focus:border-brass-300"
+          className="w-full border-0 border-b border-line-light bg-transparent py-3 text-[15px] text-ivory placeholder:text-ivory/40 outline-none focus:border-brass-300"
         />
         <input
           type="text"
           placeholder="Check-in — Check-out"
-          className="w-full border-0 border-b border-line-light bg-transparent py-3 text-[15px] text-stone-50 placeholder:text-stone-50/40 outline-none focus:border-brass-300"
+          className="w-full border-0 border-b border-line-light bg-transparent py-3 text-[15px] text-ivory placeholder:text-ivory/40 outline-none focus:border-brass-300"
         />
       </div>
       <textarea
         placeholder="Tell us about your stay, conference or event..."
         rows={4}
-        className="w-full resize-none border-0 border-b border-line-light bg-transparent py-3 text-[15px] text-stone-50 placeholder:text-stone-50/40 outline-none focus:border-brass-300"
+        className="w-full resize-none border-0 border-b border-line-light bg-transparent py-3 text-[15px] text-ivory placeholder:text-ivory/40 outline-none focus:border-brass-300"
       />
       <button
         type="submit"

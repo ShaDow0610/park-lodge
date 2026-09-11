@@ -7,16 +7,17 @@ import MagneticButton from '@/components/MagneticButton';
 export const metadata: Metadata = {
   title: 'Gallery — The Park Lodge Hotel and Apartments',
   description:
-    'A closer look at The Park Lodge — exterior, lobby, rooms, restaurant, conference venues, pool and guest experiences.',
+    'A closer look at The Park Lodge — exterior, lobby, rooms, Café on Park, conference venues, Pool Bar and guest experiences.',
 };
 
 const GALLERY_ITEMS = [
   { name: 'Hotel Exterior', big: true },
   { name: 'Lobby' },
   { name: 'Rooms' },
-  { name: 'Restaurant' },
+  { name: 'Café on Park' },
   { name: 'Conference Venues' },
   { name: 'Pool' },
+  { name: 'Pool Bar' },
   { name: 'Spa' },
   { name: 'Gym' },
   { name: 'Guest Experiences' },
@@ -29,7 +30,7 @@ export default function GalleryPage() {
         eyebrow="Gallery"
         title="A closer look"
         crumbLabel="Gallery"
-        description="Full galleries for exterior, lobby, rooms, restaurant, conference venues, pool and guest experiences will replace these placeholders once photography is delivered."
+        description="Full galleries for exterior, lobby, rooms, Café on Park, conference venues, Pool Bar and guest experiences will replace these placeholders once photography is delivered."
       />
 
       <section className="bg-stone-50 py-24 md:py-[110px]">
@@ -52,13 +53,13 @@ export default function GalleryPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-pine-950 py-20 text-stone-50 md:py-[100px]">
+      <section className="bg-pine-950 py-20 text-ivory md:py-[100px]">
         <RevealOnScroll className="mx-auto flex max-w-wrap flex-wrap items-center justify-between gap-8 px-8">
           <div className="reveal">
             <h2 className="max-w-[18ch] font-serif text-[clamp(26px,3.2vw,38px)]">
               Like what you see?
             </h2>
-            <p className="mt-3 max-w-[42ch] text-[15px] leading-relaxed text-stone-50/70">
+            <p className="mt-3 max-w-[42ch] text-[15px] leading-relaxed text-ivory/70">
               Check availability for your dates, or ask our reservations team any questions before you book.
             </p>
           </div>

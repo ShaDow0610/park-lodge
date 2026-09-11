@@ -29,7 +29,12 @@ export default function RevealOnScroll({
       ).matches;
       if (prefersReducedMotion || !scope.current) return;
 
-      const items = scope.current.querySelectorAll('.reveal');
+      // Include the wrapper itself if it was given the "reveal" class directly
+      // (querySelectorAll only matches descendants, not the scope element).
+      const descendants = Array.from(scope.current.querySelectorAll('.reveal'));
+      const items = scope.current.matches('.reveal')
+        ? [scope.current, ...descendants]
+        : descendants;
       if (!items.length) return;
 
       gsap.set(items, { scale: 0.98 });

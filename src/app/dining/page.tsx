@@ -17,16 +17,16 @@ import MagneticButton from '@/components/MagneticButton';
 import ArcSignature from '@/components/ArcSignature';
 
 export const metadata: Metadata = {
-  title: 'Dining — Café on Park | The Park Lodge Hotel and Apartments',
+  title: 'Café on Park & Pool Bar | The Park Lodge Hotel and Apartments',
   description:
-    'Breakfast, lunch, dinner and bar service at Café on Park — with room service and conference catering, Pretoria Central.',
+    'Breakfast, lunch and dinner at Café on Park, with poolside drinks at the Pool Bar — plus room service and conference catering, Pretoria Central.',
 };
 
 const HOURS = [
   { name: 'Breakfast', icon: faMugHot },
   { name: 'Lunch', icon: faUtensils },
   { name: 'Dinner', icon: faMoon },
-  { name: 'Bar', icon: faMartiniGlass },
+  { name: 'Pool Bar', icon: faMartiniGlass },
 ];
 
 const SERVICES = [
@@ -46,10 +46,10 @@ export default function DiningPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Restaurant & Bar"
-        title="Café on Park"
+        eyebrow="Café on Park & Pool Bar"
+        title="Dining & drinks at The Park Lodge"
         crumbLabel="Dining"
-        description="Breakfast, lunch, dinner and bar service in a relaxed setting — with room service for guests staying with us and dedicated catering for conferences and events."
+        description="Breakfast, lunch and dinner at Café on Park, with poolside drinks at the Pool Bar — plus room service for guests staying with us and dedicated catering for conferences and events."
       />
 
       {/* INTRO + IMAGE */}
@@ -66,9 +66,9 @@ export default function DiningPage() {
             <h2 className="mt-3 font-serif text-[clamp(28px,3.4vw,40px)] text-ink-900">
               A relaxed setting, for every meal
             </h2>
-            <p className="mt-6 max-w-[46ch] text-[16px] font-light leading-[1.75] text-ink-600">
+            <p className="mt-6 max-w-[46ch] text-[16px] font-normal leading-[1.75] text-ink-600">
               Café on Park serves guests and visitors alike, from an early breakfast before a day of meetings to a
-              quiet dinner and a drink at the bar in the evening.
+              quiet dinner in the evening — with poolside drinks at the Pool Bar whenever the sun is out.
             </p>
 
             <div className="mt-9 grid grid-cols-2 gap-x-6 gap-y-7 border-t border-line pt-8 sm:grid-cols-4">
@@ -110,7 +110,7 @@ export default function DiningPage() {
               >
                 <FontAwesomeIcon icon={s.icon} className="h-6 w-6 text-pine-800" />
                 <div className="font-serif text-xl text-ink-900">{s.title}</div>
-                <p className="text-[14.5px] font-light leading-relaxed text-ink-600">{s.desc}</p>
+                <p className="text-[14.5px] font-normal leading-relaxed text-ink-600">{s.desc}</p>
               </div>
             ))}
           </RevealOnScroll>
@@ -118,13 +118,13 @@ export default function DiningPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-pine-950 py-20 text-stone-50 md:py-[100px]">
+      <section className="bg-pine-950 py-20 text-ivory md:py-[100px]">
         <RevealOnScroll className="mx-auto flex max-w-wrap flex-wrap items-center justify-between gap-8 px-8">
           <div className="reveal">
             <h2 className="max-w-[18ch] font-serif text-[clamp(26px,3.2vw,38px)]">
               Planning a stay, a meeting or an event?
             </h2>
-            <p className="mt-3 max-w-[42ch] text-[15px] leading-relaxed text-stone-50/70">
+            <p className="mt-3 max-w-[42ch] text-[15px] leading-relaxed text-ivory/70">
               Ask us about the sample menu, or request catering as part of a conference or event booking.
             </p>
           </div>

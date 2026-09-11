@@ -5,15 +5,17 @@ import LogoMark from './LogoMark';
 
 export default function Footer() {
   return (
-    <footer className="bg-pine-950 px-0 pb-[30px] pt-16 text-stone-50/60">
+    <footer className="bg-pine-950 px-0 pb-[30px] pt-16 text-ivory/60">
       <div className="mx-auto max-w-wrap px-8">
         <div className="flex flex-wrap items-start justify-between gap-10 border-b border-line-light pb-11">
           <div className="flex items-center gap-3">
             <LogoMark className="h-[38px] w-[38px] shrink-0 rounded-lg" />
-            <span className="font-serif text-[17px] leading-[1.15] text-stone-50">
+            <span className="font-serif text-[17px] leading-[1.15] text-ivory">
               The Park Lodge
-              <span className="mt-0.5 block font-sans text-[9.5px] uppercase tracking-[0.24em] text-sage-300">
+              <span className="mt-1 block font-sans text-[10px] uppercase leading-[1.5] tracking-[0.2em] text-sage-300">
                 Hotel &amp; Apartments
+                <br />
+                Conference Facilities
               </span>
             </span>
           </div>
@@ -24,16 +26,16 @@ export default function Footer() {
                 Explore
               </h4>
               <div className="flex flex-col gap-2.5">
-                <Link href="/rooms" className="text-[13.5px] text-stone-50/70 hover:text-brass-300">
+                <Link href="/rooms" className="text-[13.5px] text-ivory/70 hover:text-brass-300">
                   Rooms &amp; Suites
                 </Link>
-                <Link href="/dining" className="text-[13.5px] text-stone-50/70 hover:text-brass-300">
+                <Link href="/dining" className="text-[13.5px] text-ivory/70 hover:text-brass-300">
                   Dining
                 </Link>
-                <Link href="/events" className="text-[13.5px] text-stone-50/70 hover:text-brass-300">
+                <Link href="/events" className="text-[13.5px] text-ivory/70 hover:text-brass-300">
                   Meetings &amp; Events
                 </Link>
-                <Link href="/gallery" className="text-[13.5px] text-stone-50/70 hover:text-brass-300">
+                <Link href="/gallery" className="text-[13.5px] text-ivory/70 hover:text-brass-300">
                   Gallery
                 </Link>
               </div>
@@ -43,16 +45,16 @@ export default function Footer() {
                 Connect
               </h4>
               <div className="flex flex-col gap-2.5">
-                <Link href="/contact" className="text-[13.5px] text-stone-50/70 hover:text-brass-300">
+                <Link href="/contact" className="text-[13.5px] text-ivory/70 hover:text-brass-300">
                   Contact
                 </Link>
-                <a href="#" className="flex items-center gap-2 text-[13.5px] text-stone-50/70 hover:text-brass-300">
+                <a href="#" className="flex items-center gap-2 text-[13.5px] text-ivory/70 hover:text-brass-300">
                   <FontAwesomeIcon icon={faInstagram} className="h-4 w-4" /> Instagram
                 </a>
-                <a href="#" className="flex items-center gap-2 text-[13.5px] text-stone-50/70 hover:text-brass-300">
+                <a href="#" className="flex items-center gap-2 text-[13.5px] text-ivory/70 hover:text-brass-300">
                   <FontAwesomeIcon icon={faFacebook} className="h-4 w-4" /> Facebook
                 </a>
-                <a href="#" className="flex items-center gap-2 text-[13.5px] text-stone-50/70 hover:text-brass-300">
+                <a href="#" className="flex items-center gap-2 text-[13.5px] text-ivory/70 hover:text-brass-300">
                   <FontAwesomeIcon icon={faLinkedin} className="h-4 w-4" /> LinkedIn
                 </a>
               </div>
@@ -60,8 +62,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-3 pt-[26px] text-xs text-stone-50/40">
-          <span>© {new Date().getFullYear()} The Park Lodge Hotel and Apartments — Pretoria Central, South Africa</span>
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-[26px] text-xs text-ivory/60">
+          <span>
+            © {new Date().getFullYear()} The Park Lodge Hotel and Apartments — comfortable accommodation, modern
+            conference facilities and exceptional hospitality in Pretoria Central, South Africa
+          </span>
         </div>
       </div>
     </footer>

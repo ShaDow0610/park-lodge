@@ -6,6 +6,7 @@ import {
   faClock,
   faSquareParking,
   faShirt,
+  faDumbbell,
 } from '@fortawesome/free-solid-svg-icons';
 import PageHeader from '@/components/PageHeader';
 import RevealOnScroll from '@/components/RevealOnScroll';
@@ -42,6 +43,7 @@ const INCLUDED = [
   { icon: faClock, label: '24-Hour Reception' },
   { icon: faSquareParking, label: 'Underground Parking' },
   { icon: faShirt, label: 'Guest Laundry' },
+  { icon: faDumbbell, label: 'Gym' },
 ];
 
 export default function RoomsPage() {
@@ -86,7 +88,7 @@ export default function RoomsPage() {
                     Content pending
                   </span>
                 </div>
-                <p className="mt-6 max-w-[46ch] text-[16px] font-light leading-[1.75] text-ink-600">{room.usp}</p>
+                <p className="mt-6 max-w-[46ch] text-[16px] font-normal leading-[1.75] text-ink-600">{room.usp}</p>
                 <p className="mt-3 max-w-[46ch] text-sm italic text-ink-600/70">{room.fit}</p>
                 <MagneticButton
                   href="/contact"
@@ -112,7 +114,7 @@ export default function RoomsPage() {
               Hotel-wide facilities, for every guest
             </h2>
           </div>
-          <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
             {INCLUDED.map((item) => (
               <div key={item.label} className="reveal flex flex-col items-center gap-3.5 text-center">
                 <FontAwesomeIcon icon={item.icon} className="h-6 w-6 text-pine-800" />
@@ -124,13 +126,13 @@ export default function RoomsPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-pine-950 py-20 text-stone-50 md:py-[100px]">
+      <section className="bg-pine-950 py-20 text-ivory md:py-[100px]">
         <RevealOnScroll className="mx-auto flex max-w-wrap flex-wrap items-center justify-between gap-8 px-8">
           <div className="reveal">
             <h2 className="max-w-[18ch] font-serif text-[clamp(26px,3.2vw,38px)]">
               Ready to check availability?
             </h2>
-            <p className="mt-3 max-w-[42ch] text-[15px] leading-relaxed text-stone-50/70">
+            <p className="mt-3 max-w-[42ch] text-[15px] leading-relaxed text-ivory/70">
               Tell our reservations team your dates and preferred room category — they&rsquo;ll confirm rates and
               availability directly.
             </p>

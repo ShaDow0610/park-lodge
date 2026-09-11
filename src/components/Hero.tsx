@@ -148,14 +148,14 @@ export default function Hero() {
             Pretoria Central · Gauteng · South Africa
           </div>
           <h1
-            className="hero-anim mt-6 max-w-[12ch] font-serif text-[clamp(44px,6.6vw,86px)] text-stone-50"
+            className="hero-anim mt-6 max-w-[12ch] font-serif text-[clamp(44px,6.6vw,86px)] text-ivory"
             style={{ textShadow: "0 4px 30px rgba(0,0,0,.4)" }}
             dangerouslySetInnerHTML={{
               __html: `${wrapWords("Your comfort,")}<br/><em class="font-normal italic text-sage-300">${wrapWords("our priority.")}</em>`,
             }}
           />
           <p
-            className="hero-anim mt-7 max-w-[46ch] text-[17px] font-light leading-[1.65] text-stone-50/70"
+            className="hero-anim mt-7 max-w-[46ch] text-[17px] font-normal leading-[1.65] text-ivory/70"
             style={{ textShadow: "0 2px 16px rgba(0,0,0,.3)" }}>
             A considered base for business and leisure in the heart of Pretoria
             — comfortable rooms, modern conference facilities and hospitality
@@ -169,14 +169,14 @@ export default function Hero() {
             </MagneticButton>
             <a
               href="#about"
-              className="inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm border border-line-light px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-stone-50 transition-colors hover:border-brass-300 hover:text-brass-300">
+              className="inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm border border-line-light px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-ivory transition-colors hover:border-brass-300 hover:text-brass-300">
               Explore The Lodge
             </a>
           </div>
         </div>
 
         <div className="hero-anim text-left md:text-right">
-          <div className="ml-0 max-w-[280px] border-t border-line-light pt-[18px] font-serif text-[22px] italic text-stone-50 md:ml-auto">
+          <div className="ml-0 max-w-[280px] border-t border-line-light pt-[18px] font-serif text-[22px] italic text-ivory md:ml-auto">
             &ldquo;Comfortable accommodation, modern conference facilities,
             exceptional hospitality.&rdquo;
             <span className="mt-2.5 block font-sans text-[11px] not-italic uppercase tracking-[0.2em] text-grey-400">
@@ -190,7 +190,7 @@ export default function Hero() {
         {STATS.map((stat) => (
           <div
             key={stat.label}
-            className="flex items-center gap-2.5 text-[12.5px] tracking-[0.05em] text-stone-50/65">
+            className="flex items-center gap-2.5 text-[12.5px] tracking-[0.05em] text-ivory/65">
             <FontAwesomeIcon
               icon={stat.icon}
               className="h-4 w-4 text-brass-300"

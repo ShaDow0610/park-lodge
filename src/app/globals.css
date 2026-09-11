@@ -8,7 +8,7 @@
   --sand-200: #eae6d6;
   --ink-900: #1c1b17;
   --ink-600: #57564c;
-  --grey-400: #9c9c93;
+  --grey-400: #6f6e65;
   --line: rgba(28, 27, 23, 0.1);
   --line-light: rgba(250, 249, 244, 0.18);
 }
@@ -20,7 +20,7 @@ html[data-theme='dark'] {
   --sand-200: #1e2a18;
   --ink-900: #f2f0e6;
   --ink-600: #bcbcae;
-  --grey-400: #8a8a80;
+  --grey-400: #b7b6a9;
   --line: rgba(242, 240, 230, 0.12);
 }
 

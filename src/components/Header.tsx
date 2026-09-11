@@ -56,10 +56,12 @@ export default function Header() {
       <div className="mx-auto flex max-w-wrap items-center justify-between gap-6 px-8">
         <Link href="/" className="flex items-center gap-3">
           <LogoMark className="h-[38px] w-[38px] shrink-0 rounded-lg" />
-          <span className="font-serif text-[17px] leading-[1.15] text-stone-50">
+          <span className="font-serif text-[17px] leading-[1.15] text-ivory">
             The Park Lodge
-            <span className="mt-0.5 block font-sans text-[9.5px] uppercase tracking-[0.24em] text-sage-300">
+            <span className="mt-1 block font-sans text-[10px] uppercase leading-[1.5] tracking-[0.2em] text-sage-300">
               Hotel &amp; Apartments
+              <br />
+              Conference Facilities
             </span>
           </span>
         </Link>
@@ -82,7 +84,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`relative text-[13px] tracking-[0.04em] text-stone-50 opacity-80 transition-opacity after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-brass-300 after:transition-[width] after:duration-300 after:ease-signature hover:opacity-100 hover:after:w-full ${
+              className={`relative text-[13px] tracking-[0.04em] text-ivory opacity-80 transition-opacity after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-brass-300 after:transition-[width] after:duration-300 after:ease-signature hover:opacity-100 hover:after:w-full ${
                 pathname === link.href ? 'opacity-100 after:w-full' : ''
               }`}
             >
@@ -91,11 +93,11 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-[18px]">
+        <div className="relative z-[120] flex items-center gap-[18px]">
           <button
             onClick={toggleTheme}
             aria-label="Toggle dark mode"
-            className="flex h-8 w-8 items-center justify-center text-stone-50/80 transition-colors hover:text-brass-300"
+            className="flex h-8 w-8 items-center justify-center text-ivory/80 transition-colors hover:text-brass-300"
           >
             <FontAwesomeIcon icon={isDark ? faSun : faMoon} className="h-4 w-4" />
           </button>
@@ -111,17 +113,17 @@ export default function Header() {
             className="flex h-8 w-8 flex-col items-center justify-center gap-1.5 lg:hidden"
           >
             <span
-              className={`block h-[1.5px] w-5 bg-stone-50 transition-transform ${
+              className={`block h-[1.5px] w-5 bg-ivory transition-transform ${
                 menuOpen ? 'translate-y-[6.5px] rotate-45' : ''
               }`}
             />
             <span
-              className={`block h-[1.5px] w-5 bg-stone-50 transition-opacity ${
+              className={`block h-[1.5px] w-5 bg-ivory transition-opacity ${
                 menuOpen ? 'opacity-0' : ''
               }`}
             />
             <span
-              className={`block h-[1.5px] w-5 bg-stone-50 transition-transform ${
+              className={`block h-[1.5px] w-5 bg-ivory transition-transform ${
                 menuOpen ? '-translate-y-[6.5px] -rotate-45' : ''
               }`}
             />

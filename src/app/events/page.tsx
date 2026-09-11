@@ -61,7 +61,7 @@ export default function EventsPage() {
             <h2 className="mt-3 font-serif text-[clamp(28px,3.4vw,40px)] text-ink-900">
               Space that adapts to your gathering
             </h2>
-            <p className="mt-6 max-w-[46ch] text-[16px] font-light leading-[1.75] text-ink-600">
+            <p className="mt-6 max-w-[46ch] text-[16px] font-normal leading-[1.75] text-ink-600">
               From a small delegation briefing to a full-day conference, The Park Lodge hosts government, corporate
               and group bookings in the heart of Pretoria Central.
             </p>
@@ -90,12 +90,12 @@ export default function EventsPage() {
       </section>
 
       {/* SUITED FOR */}
-      <section className="bg-pine-950 py-20 text-stone-50 md:py-24">
+      <section className="bg-pine-950 py-20 text-ivory md:py-24">
         <div className="mx-auto max-w-wrap px-8">
           <RevealOnScroll className="reveal mb-12 flex flex-col items-center text-center">
             <ArcSignature />
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-sage-300">Who We Host</span>
-            <h2 className="mt-3 font-serif text-[clamp(26px,3vw,36px)] text-stone-50">Suited for</h2>
+            <h2 className="mt-3 font-serif text-[clamp(26px,3vw,36px)] text-ivory">Suited for</h2>
           </RevealOnScroll>
           <RevealOnScroll className="grid grid-cols-2 gap-6 sm:grid-cols-4">
             {SUITED_FOR.map((item) => (
@@ -104,7 +104,7 @@ export default function EventsPage() {
                 className="reveal flex flex-col items-center gap-3.5 border border-line-light p-7 text-center transition-colors duration-300 hover:border-brass-300"
               >
                 <FontAwesomeIcon icon={item.icon} className="h-6 w-6 text-brass-300" />
-                <span className="text-[13px] font-medium text-stone-50">{item.label}</span>
+                <span className="text-[13px] font-medium text-ivory">{item.label}</span>
               </div>
             ))}
           </RevealOnScroll>
@@ -131,7 +131,7 @@ export default function EventsPage() {
               >
                 <FontAwesomeIcon icon={item.icon} className="h-6 w-6 text-pine-800" />
                 <div className="font-serif text-lg text-ink-900">{item.label}</div>
-                <p className="text-[14px] font-light leading-relaxed text-ink-600">{item.desc}</p>
+                <p className="text-[14px] font-normal leading-relaxed text-ink-600">{item.desc}</p>
               </div>
             ))}
           </RevealOnScroll>

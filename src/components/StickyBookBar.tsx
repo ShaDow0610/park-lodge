@@ -15,7 +15,7 @@ export default function StickyBookBar() {
 
   return (
     <div
-      className={`fixed inset-x-0 bottom-0 z-[150] hidden items-center justify-between gap-4 border-t border-line-light bg-pine-950 px-5 py-3 text-stone-50 transition-transform duration-[400ms] ease-[cubic-bezier(.22,.68,0,1)] max-[680px]:flex ${
+      className={`fixed inset-x-0 bottom-0 z-[150] hidden items-center justify-between gap-4 border-t border-line-light bg-pine-950 px-5 py-3 text-ivory transition-transform duration-[400ms] ease-[cubic-bezier(.22,.68,0,1)] max-[680px]:flex ${
         show ? 'translate-y-0' : 'translate-y-full'
       }`}
     >

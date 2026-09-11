@@ -80,13 +80,13 @@ export default function SectionHead({
         </span>
         <h2
           className={`mt-2 font-serif text-[clamp(30px,4vw,46px)] ${
-            onDark ? 'text-stone-50' : 'text-ink-900'
+            onDark ? 'text-ivory' : 'text-ink-900'
           }`}
         >
           {title}
         </h2>
         {description && (
-          <p className={`mt-3 max-w-[38ch] text-[15px] leading-relaxed ${onDark ? 'text-stone-50/70' : 'text-ink-600'}`}>
+          <p className={`mt-3 max-w-[38ch] text-[15px] leading-relaxed ${onDark ? 'text-ivory/70' : 'text-ink-600'}`}>
             {description}
           </p>
         )}

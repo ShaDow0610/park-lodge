@@ -54,7 +54,7 @@ export default function PageHeader({
   return (
     <section
       ref={rootRef}
-      className="relative overflow-hidden bg-pine-950 pb-16 pt-[150px] text-stone-50 md:pb-20 md:pt-[170px]"
+      className="relative overflow-hidden bg-pine-950 pb-16 pt-[150px] text-ivory md:pb-20 md:pt-[170px]"
     >
       <ArcMotif
         className="pgh-arc -top-[260px] -right-[220px]"
@@ -68,21 +68,21 @@ export default function PageHeader({
       />
 
       <div className="relative z-[2] mx-auto max-w-wrap px-8">
-        <div className="pgh-anim mb-5 flex items-center gap-2 text-[11.5px] uppercase tracking-[0.08em] text-stone-50/50">
+        <div className="pgh-anim mb-5 flex items-center gap-2 text-[11.5px] uppercase tracking-[0.08em] text-ivory/50">
           <Link href="/" className="transition-colors hover:text-brass-300">
             Home
           </Link>
           <span>/</span>
-          <span className="text-stone-50/80">{crumbLabel}</span>
+          <span className="text-ivory/80">{crumbLabel}</span>
         </div>
         <div className="pgh-anim text-xs font-semibold uppercase tracking-[0.22em] text-brass-300">
           {eyebrow}
         </div>
-        <h1 className="pgh-anim mt-4 max-w-[16ch] font-serif text-[clamp(34px,5vw,58px)] text-stone-50">
+        <h1 className="pgh-anim mt-4 max-w-[16ch] font-serif text-[clamp(34px,5vw,58px)] text-ivory">
           {title}
         </h1>
         {description && (
-          <p className="pgh-anim mt-5 max-w-[54ch] text-[15.5px] font-light leading-relaxed text-stone-50/70">
+          <p className="pgh-anim mt-5 max-w-[54ch] text-[15.5px] font-normal leading-relaxed text-ivory/70">
             {description}
           </p>
         )}

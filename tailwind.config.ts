@@ -23,6 +23,10 @@ const config: Config = {
           500: '#b4894f',
           300: '#d3ac78',
         },
+        // Fixed off-white for text/icons on permanently-dark brand backgrounds
+        // (header, footer, page banners, dark CTA sections). Unlike `stone`,
+        // this never flips in dark mode — it must always read as light text.
+        ivory: '#faf9f4',
         // Semantic surface colors — sourced from CSS variables so they can
         // flip in dark mode via the [data-theme="dark"] attribute (see globals.css)
         stone: {

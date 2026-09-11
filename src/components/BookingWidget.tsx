@@ -11,7 +11,7 @@ export default function BookingWidget() {
         className="grid grid-cols-1 gap-5 rounded border-t-2 border-brass-500 bg-stone-50 p-[22px] shadow-[0_24px_60px_-20px_rgba(20,31,16,0.35)] sm:grid-cols-2 md:grid-cols-[1fr_1fr_1fr_1fr_auto] md:items-end md:gap-[22px] md:p-[26px_30px]"
       >
         <label className="flex min-w-0 flex-col gap-2">
-          <span className="flex items-center gap-1.5 text-[10.5px] uppercase tracking-[0.12em] text-grey-400">
+          <span className="flex items-center gap-1.5 text-[11.5px] font-medium uppercase tracking-[0.1em] text-grey-400">
             <FontAwesomeIcon icon={faCalendar} className="h-3 w-3 text-brass-500" /> Check-in
           </span>
           <input
@@ -20,7 +20,7 @@ export default function BookingWidget() {
           />
         </label>
         <label className="flex min-w-0 flex-col gap-2">
-          <span className="flex items-center gap-1.5 text-[10.5px] uppercase tracking-[0.12em] text-grey-400">
+          <span className="flex items-center gap-1.5 text-[11.5px] font-medium uppercase tracking-[0.1em] text-grey-400">
             <FontAwesomeIcon icon={faCalendar} className="h-3 w-3 text-brass-500" /> Check-out
           </span>
           <input
@@ -29,7 +29,7 @@ export default function BookingWidget() {
           />
         </label>
         <label className="flex min-w-0 flex-col gap-2">
-          <span className="flex items-center gap-1.5 text-[10.5px] uppercase tracking-[0.12em] text-grey-400">
+          <span className="flex items-center gap-1.5 text-[11.5px] font-medium uppercase tracking-[0.1em] text-grey-400">
             <FontAwesomeIcon icon={faUser} className="h-3 w-3 text-brass-500" /> Guests
           </span>
           <select className="w-full min-w-0 border-0 border-b border-line bg-transparent py-1.5 text-[14.5px] text-ink-900 outline-none focus:border-brass-500">
@@ -40,7 +40,7 @@ export default function BookingWidget() {
           </select>
         </label>
         <label className="flex min-w-0 flex-col gap-2">
-          <span className="flex items-center gap-1.5 text-[10.5px] uppercase tracking-[0.12em] text-grey-400">
+          <span className="flex items-center gap-1.5 text-[11.5px] font-medium uppercase tracking-[0.1em] text-grey-400">
             <FontAwesomeIcon icon={faDoorClosed} className="h-3 w-3 text-brass-500" /> Room Type
           </span>
           <select className="w-full min-w-0 border-0 border-b border-line bg-transparent py-1.5 text-[14.5px] text-ink-900 outline-none focus:border-brass-500">
