@@ -17,13 +17,13 @@ export const metadata: Metadata = {
 };
 
 const GALLERY_ITEMS = [
-  { name: 'Hotel Exterior', big: true },
-  { name: 'Lobby' },
+  { name: 'Hotel Exterior', big: true, src: '/images/hotel-exterior.jpg' },
+  { name: 'Lobby', src: '/images/lobby.jpg' },
   { name: 'Rooms' },
-  { name: 'Café on Park' },
-  { name: 'Conference Venues' },
-  { name: 'Pool' },
-  { name: 'Pool Bar' },
+  { name: 'Café on Park', src: '/images/cafe-on-park.jpg' },
+  { name: 'Conference Venues', src: '/images/conference-venue.jpg' },
+  { name: 'Pool', src: '/images/pool.jpg' },
+  { name: 'Pool Bar', src: '/images/pool-bar.jpg' },
   { name: 'Spa' },
   { name: 'Gym' },
   { name: 'Guest Experiences' },
@@ -48,6 +48,8 @@ export default function GalleryPage() {
                 className={`reveal ${item.big ? 'col-span-2 row-span-2' : ''}`}
               >
                 <PlaceholderPhoto
+                  src={item.src}
+                  alt={item.src ? `${item.name}, The Park Lodge` : undefined}
                   label={item.name}
                   aspect=""
                   className="h-full rounded-sm"

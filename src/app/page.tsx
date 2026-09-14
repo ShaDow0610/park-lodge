@@ -109,7 +109,13 @@ const FACILITIES = [
   { icon: faClock, label: '24-Hour Reception' },
 ];
 
-const GALLERY_PREVIEW = ['Hotel Exterior', 'Lobby', 'Rooms', 'Café on Park', 'Pool'];
+const GALLERY_PREVIEW = [
+  { name: 'Hotel Exterior', src: '/images/hotel-exterior.jpg' },
+  { name: 'Lobby', src: '/images/lobby.jpg' },
+  { name: 'Rooms', src: undefined },
+  { name: 'Café on Park', src: '/images/cafe-on-park.jpg' },
+  { name: 'Pool', src: '/images/pool.jpg' },
+];
 
 export default function HomePage() {
   return (
@@ -138,8 +144,9 @@ export default function HomePage() {
         <RevealOnScroll className="mx-auto grid max-w-wrap grid-cols-1 items-center gap-14 px-8 md:grid-cols-[0.9fr_1.1fr] md:gap-[72px]">
           <div className="reveal">
             <PlaceholderPhoto
+              src="/images/hotel-exterior.jpg"
+              alt="The Park Lodge Hotel and Apartments — entrance, Pretoria Central"
               label="Hotel Exterior"
-              tag="Sample image"
               aspect="aspect-[4/5]"
               className="h-full"
             />
@@ -278,7 +285,11 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="reveal">
-            <PlaceholderPhoto label="Café on Park" tag="Sample image" aspect="aspect-square" />
+            <PlaceholderPhoto
+              src="/images/cafe-on-park.jpg"
+              alt="Café on Park restaurant, The Park Lodge"
+              aspect="aspect-square"
+            />
           </div>
         </RevealOnScroll>
       </section>
@@ -301,7 +312,12 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="reveal md:order-1">
-            <PlaceholderPhoto label="Pool Bar" tag="Sample image" aspect="aspect-square" variant="light" />
+            <PlaceholderPhoto
+              src="/images/pool-bar.jpg"
+              alt="Pool Bar, The Park Lodge"
+              aspect="aspect-square"
+              variant="light"
+            />
           </div>
         </RevealOnScroll>
       </section>
@@ -387,9 +403,15 @@ export default function HomePage() {
             description="Full galleries for exterior, lobby, rooms, Café on Park, conference venues, Pool Bar and guest experiences will replace these placeholders once photography is delivered."
           />
           <RevealOnScroll className="grid grid-cols-2 gap-3.5 md:grid-cols-5">
-            {GALLERY_PREVIEW.map((name) => (
-              <div key={name} className="reveal">
-                <PlaceholderPhoto label={name} aspect="aspect-[4/5]" className="rounded-sm" />
+            {GALLERY_PREVIEW.map((item) => (
+              <div key={item.name} className="reveal">
+                <PlaceholderPhoto
+                  src={item.src}
+                  alt={item.src ? `${item.name}, The Park Lodge` : undefined}
+                  label={item.name}
+                  aspect="aspect-[4/5]"
+                  className="rounded-sm"
+                />
               </div>
             ))}
           </RevealOnScroll>

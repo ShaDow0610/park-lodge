@@ -24,3 +24,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw client photography — kept locally, never shipped or committed;
+# curated/compressed picks live in public/images/ instead
+/photos-source/

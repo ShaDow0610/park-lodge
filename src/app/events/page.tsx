@@ -57,7 +57,12 @@ export default function EventsPage() {
       <section className="bg-stone-50 py-24 md:py-[110px]">
         <RevealOnScroll className="mx-auto grid max-w-wrap grid-cols-1 items-center gap-14 px-8 md:grid-cols-2 md:gap-[70px]">
           <div className="reveal">
-            <PlaceholderPhoto label="Conference Venues" tag="Sample image" aspect="aspect-[4/5]" className="rounded-sm" />
+            <PlaceholderPhoto
+              src="/images/conference-venue.jpg"
+              alt="Conference venue, The Park Lodge Hotel and Apartments"
+              aspect="aspect-[4/5]"
+              className="rounded-sm"
+            />
           </div>
           <div className="reveal">
             <ArcSignature />
