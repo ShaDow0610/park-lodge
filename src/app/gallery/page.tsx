@@ -26,7 +26,7 @@ const GALLERY_ITEMS = [
   { name: 'Pool Bar', src: '/images/pool-bar.jpg' },
   { name: 'Spa', src: '/images/spa.jpg' },
   { name: 'Gym' },
-  { name: 'Guest Experiences' },
+  { name: 'Guest Experiences', src: '/images/guest-experience.jpg' },
 ];
 
 export default function GalleryPage() {

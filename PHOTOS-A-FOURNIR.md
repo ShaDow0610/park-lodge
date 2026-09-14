@@ -38,10 +38,11 @@ Vous pouvez mélanger les deux méthodes, ligne par ligne — peu importe.
 | 10 | Piscine | `pool.jpg` | ✅ Intégrée | Galerie |
 | 11 | Spa | `spa.jpg` | ✅ Intégrée (+ ajoutée aux facilités) | Galerie, liste des facilités |
 | 12 | Salle de sport / Gym | `gym.jpg` | ⏳ En attente | Galerie |
-| 13 | Moment client / expérience | `guest-experience.jpg` | ⏳ En attente | Galerie |
+| 13 | Moment client / expérience | `guest-experience.jpg` | ✅ Intégrée (cocktails au bord de la piscine) | Galerie |
 
-**11 sur 13 sont déjà en ligne.** Il ne manque plus que : le gym et une
-photo d'ambiance/expérience client.
+**12 sur 13 sont déjà en ligne.** Il ne manque plus que le **gym** —
+placeholder conservé en attendant une vraie photo (pour ne pas afficher
+une image trompeuse à la place).
 
 > Vos dossiers "Rooms" contenaient aussi un 2e jeu de photos d'appartement
 > (`Apt 2`) — non utilisé pour l'instant (une seule photo par catégorie
