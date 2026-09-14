@@ -37,12 +37,13 @@ Vous pouvez mélanger les deux méthodes, ligne par ligne — peu importe.
 | 9 | Salle de conférence / événements | `conference-venue.jpg` | ✅ Intégrée (salle "Magnolia") | Page Meetings & Events, Galerie |
 | 10 | Piscine | `pool.jpg` | ✅ Intégrée | Galerie |
 | 11 | Spa | `spa.jpg` | ✅ Intégrée (+ ajoutée aux facilités) | Galerie, liste des facilités |
-| 12 | Salle de sport / Gym | `gym.jpg` | ⏳ En attente | Galerie |
+| 12 | Salle de sport / Gym | `gym.jpg` | ✅ Intégrée | Galerie |
 | 13 | Moment client / expérience | `guest-experience.jpg` | ✅ Intégrée (cocktails au bord de la piscine) | Galerie |
 
-**12 sur 13 sont déjà en ligne.** Il ne manque plus que le **gym** —
-placeholder conservé en attendant une vraie photo (pour ne pas afficher
-une image trompeuse à la place).
+**Les 13 photos sont maintenant en ligne.** 🎉 Toute la galerie et le
+site utilisent de vraies photos — il n'y a plus de placeholder photo
+nulle part (seules les infos "Size TBC / Sleeps TBC" sur les chambres et
+les tarifs restent en attente de contenu texte, pas de photos).
 
 > Vos dossiers "Rooms" contenaient aussi un 2e jeu de photos d'appartement
 > (`Apt 2`) — non utilisé pour l'instant (une seule photo par catégorie

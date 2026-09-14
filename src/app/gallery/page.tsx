@@ -25,7 +25,7 @@ const GALLERY_ITEMS = [
   { name: 'Pool', src: '/images/pool.jpg' },
   { name: 'Pool Bar', src: '/images/pool-bar.jpg' },
   { name: 'Spa', src: '/images/spa.jpg' },
-  { name: 'Gym' },
+  { name: 'Gym', src: '/images/gym.jpg' },
   { name: 'Guest Experiences', src: '/images/guest-experience.jpg' },
 ];
 
