@@ -8,6 +8,7 @@ import {
   faWater,
   faMartiniGlass,
   faDumbbell,
+  faSpa,
   faPlaneDeparture,
   faSquareParking,
   faWifi,
@@ -66,14 +67,22 @@ const ROOMS = [
   {
     name: 'Standard Room',
     usp: 'A comfortable, well-appointed room for the business or leisure stay.',
+    src: '/images/room-standard.jpg',
+  },
+  {
+    name: 'Deluxe Room',
+    usp: 'A touch more comfort, with a dedicated desk for working on the road.',
+    src: '/images/room-deluxe.jpg',
   },
   {
     name: 'Executive Suite',
     usp: 'Extra space and a work area, suited to longer business stays.',
+    src: '/images/room-executive.jpg',
   },
   {
     name: 'Self-Catering Apartment',
     usp: 'A kitchenette and living space, ideal for long-stay guests.',
+    src: '/images/room-apartment.jpg',
   },
 ];
 
@@ -102,6 +111,7 @@ const FACILITIES = [
   { icon: faPeopleGroup, label: 'Conference & Events' },
   { icon: faWater, label: 'Swimming Pool' },
   { icon: faDumbbell, label: 'Gym' },
+  { icon: faSpa, label: 'Spa' },
   { icon: faPlaneDeparture, label: 'Airport Shuttle' },
   { icon: faSquareParking, label: 'Underground Parking' },
   { icon: faWifi, label: 'Complimentary Wi-Fi' },
@@ -112,7 +122,7 @@ const FACILITIES = [
 const GALLERY_PREVIEW = [
   { name: 'Hotel Exterior', src: '/images/hotel-exterior.jpg' },
   { name: 'Lobby', src: '/images/lobby.jpg' },
-  { name: 'Rooms', src: undefined },
+  { name: 'Rooms', src: '/images/room-standard.jpg' },
   { name: 'Café on Park', src: '/images/cafe-on-park.jpg' },
   { name: 'Pool', src: '/images/pool.jpg' },
 ];
@@ -197,11 +207,11 @@ export default function HomePage() {
           </RevealOnScroll>
           <div className="mt-9 flex flex-wrap gap-x-11 gap-y-8 border-t border-line pt-7">
             <div className="flex min-w-[120px] flex-col gap-1">
-              <CountUp to={3} className="font-serif text-3xl text-pine-800" />
+              <CountUp to={4} className="font-serif text-3xl text-pine-800" />
               <span className="text-[11px] uppercase tracking-[0.08em] text-grey-400">Room Categories</span>
             </div>
             <div className="flex min-w-[120px] flex-col gap-1">
-              <CountUp to={11} className="font-serif text-3xl text-pine-800" />
+              <CountUp to={12} className="font-serif text-3xl text-pine-800" />
               <span className="text-[11px] uppercase tracking-[0.08em] text-grey-400">Facilities &amp; Services</span>
             </div>
             <div className="flex min-w-[120px] flex-col gap-1">
@@ -232,7 +242,13 @@ export default function HomePage() {
             <RoomsTrack>
               {ROOMS.map((room) => (
                 <div key={room.name} className="reveal md:w-[min(38vw,420px)] md:shrink-0">
-                  <PlaceholderPhoto label={room.name} tag="Sample image" aspect="aspect-[4/5]" className="rounded-sm" />
+                  <PlaceholderPhoto
+                    src={room.src}
+                    alt={`${room.name}, The Park Lodge Hotel and Apartments`}
+                    label={room.name}
+                    aspect="aspect-[4/5]"
+                    className="rounded-sm"
+                  />
                   <div className="pt-[22px]">
                     <div className="mb-2 font-serif text-[21px]">{room.name}</div>
                     <div className="mb-3 flex flex-wrap gap-3.5 text-xs text-ink-600">
@@ -531,7 +547,7 @@ export default function HomePage() {
             comfortable accommodation, self-catering apartments, modern conference facilities and exceptional
             hospitality. We welcome corporate travellers, government departments, conference delegates, tour
             groups, leisure travellers and long-stay guests alike, with quality service, convenient on-site
-            facilities — including Café on Park, the Pool Bar and a fully equipped gym — and excellent value
+            facilities — including Café on Park, the Pool Bar, a fully equipped gym and spa — and excellent value
             throughout every stay.
           </p>
         </RevealOnScroll>

@@ -34,6 +34,7 @@ export default function StructuredData() {
       'Pool Bar',
       'Swimming Pool',
       'Gym',
+      'Spa',
       'Conference & Event Facilities',
       'Complimentary Wi-Fi',
       'Underground Parking',

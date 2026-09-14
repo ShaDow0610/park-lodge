@@ -16,7 +16,7 @@ import ArcSignature from '@/components/ArcSignature';
 
 const TITLE = 'Rooms & Suites';
 const DESCRIPTION =
-  'Standard Rooms, Executive Suites and Self-Catering Apartments at The Park Lodge, Pretoria Central — comfortable accommodation for business and leisure stays.';
+  'Standard, Deluxe and Executive rooms plus Self-Catering Apartments at The Park Lodge, Pretoria Central — comfortable accommodation for business and leisure stays.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -31,16 +31,25 @@ const ROOMS = [
     name: 'Standard Room',
     usp: 'A comfortable, well-appointed room for the business or leisure stay.',
     fit: 'Best for short business trips and solo or couple stays.',
+    src: '/images/room-standard.jpg',
+  },
+  {
+    name: 'Deluxe Room',
+    usp: 'A touch more comfort, with a dedicated desk for working on the road.',
+    fit: 'Best for guests who want extra polish without the step up to a suite.',
+    src: '/images/room-deluxe.jpg',
   },
   {
     name: 'Executive Suite',
     usp: 'Extra space and a work area, suited to longer business stays.',
     fit: 'Best for extended business travel and delegates who need room to work.',
+    src: '/images/room-executive.jpg',
   },
   {
     name: 'Self-Catering Apartment',
     usp: 'A kitchenette and living space, ideal for long-stay guests.',
     fit: 'Best for relocating teams, month-long stays and travelling families.',
+    src: '/images/room-apartment.jpg',
   },
 ];
 
@@ -59,7 +68,7 @@ export default function RoomsPage() {
         eyebrow="Accommodation"
         title="Rooms & suites"
         crumbLabel="Rooms & Suites"
-        description="Three categories of accommodation across The Park Lodge — from a well-appointed standard room to a self-catering apartment for longer stays. Size, occupancy, bed configuration and full amenity lists will be added once final content is supplied."
+        description="Four categories of accommodation across The Park Lodge — from a well-appointed standard room to a self-catering apartment for longer stays. Size, occupancy, bed configuration and full amenity lists will be added once final content is supplied."
       />
 
       {/* ROOM CATEGORIES */}
@@ -73,7 +82,12 @@ export default function RoomsPage() {
               }`}
             >
               <div className="reveal">
-                <PlaceholderPhoto label={room.name} tag="Sample image" aspect="aspect-[4/3]" className="rounded-sm" />
+                <PlaceholderPhoto
+                  src={room.src}
+                  alt={`${room.name}, The Park Lodge Hotel and Apartments`}
+                  aspect="aspect-[4/3]"
+                  className="rounded-sm"
+                />
               </div>
               <div className="reveal">
                 <ArcSignature />

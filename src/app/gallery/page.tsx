@@ -19,12 +19,12 @@ export const metadata: Metadata = {
 const GALLERY_ITEMS = [
   { name: 'Hotel Exterior', big: true, src: '/images/hotel-exterior.jpg' },
   { name: 'Lobby', src: '/images/lobby.jpg' },
-  { name: 'Rooms' },
+  { name: 'Rooms', src: '/images/room-deluxe.jpg' },
   { name: 'Café on Park', src: '/images/cafe-on-park.jpg' },
   { name: 'Conference Venues', src: '/images/conference-venue.jpg' },
   { name: 'Pool', src: '/images/pool.jpg' },
   { name: 'Pool Bar', src: '/images/pool-bar.jpg' },
-  { name: 'Spa' },
+  { name: 'Spa', src: '/images/spa.jpg' },
   { name: 'Gym' },
   { name: 'Guest Experiences' },
 ];

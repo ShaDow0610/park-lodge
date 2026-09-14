@@ -28,21 +28,25 @@ Vous pouvez mélanger les deux méthodes, ligne par ligne — peu importe.
 |---|-------|-----------------|--------|-------------|
 | 1 | Façade / extérieur de l'hôtel | `hotel-exterior.jpg` | ✅ Intégrée | Accueil (section "Welcome"), Galerie (grande tuile) |
 | 2 | Lobby / réception | `lobby.jpg` | ✅ Intégrée | Galerie |
-| 3 | Standard Room | `room-standard.jpg` | ⏳ En attente | Accueil, page Rooms & Suites, Galerie |
-| 4 | Executive Suite | `room-executive.jpg` | ⏳ En attente | Accueil, page Rooms & Suites |
-| 5 | Self-Catering Apartment | `room-apartment.jpg` | ⏳ En attente | Accueil, page Rooms & Suites |
-| 6 | Café on Park (restaurant) | `cafe-on-park.jpg` | ✅ Intégrée | Accueil, page Dining, Galerie |
-| 7 | Pool Bar | `pool-bar.jpg` | ✅ Intégrée | Accueil, Galerie |
-| 8 | Salle de conférence / événements | `conference-venue.jpg` | ✅ Intégrée (salle "Magnolia") | Page Meetings & Events, Galerie |
-| 9 | Piscine | `pool.jpg` | ✅ Intégrée | Galerie |
-| 10 | Spa | `spa.jpg` | ⏳ En attente | Galerie |
-| 11 | Salle de sport / Gym | `gym.jpg` | ⏳ En attente | Galerie |
-| 12 | Moment client / expérience | `guest-experience.jpg` | ⏳ En attente | Galerie |
+| 3 | Standard Room | `room-standard.jpg` | ✅ Intégrée | Accueil, page Rooms & Suites, Galerie |
+| 4 | Deluxe Room *(nouvelle catégorie, ajoutée sur le site)* | `room-deluxe.jpg` | ✅ Intégrée | Accueil, page Rooms & Suites |
+| 5 | Executive Suite | `room-executive.jpg` | ✅ Intégrée | Accueil, page Rooms & Suites |
+| 6 | Self-Catering Apartment | `room-apartment.jpg` | ✅ Intégrée | Accueil, page Rooms & Suites |
+| 7 | Café on Park (restaurant) | `cafe-on-park.jpg` | ✅ Intégrée | Accueil, page Dining, Galerie |
+| 8 | Pool Bar | `pool-bar.jpg` | ✅ Intégrée | Accueil, Galerie |
+| 9 | Salle de conférence / événements | `conference-venue.jpg` | ✅ Intégrée (salle "Magnolia") | Page Meetings & Events, Galerie |
+| 10 | Piscine | `pool.jpg` | ✅ Intégrée | Galerie |
+| 11 | Spa | `spa.jpg` | ✅ Intégrée (+ ajoutée aux facilités) | Galerie, liste des facilités |
+| 12 | Salle de sport / Gym | `gym.jpg` | ⏳ En attente | Galerie |
+| 13 | Moment client / expérience | `guest-experience.jpg` | ⏳ En attente | Galerie |
 
-**7 sur 12 sont déjà en ligne** (celles reçues dans les dossiers Outside,
-Lobby and Reception, Restaurant, Pool Bar, Conference copy). Il ne manque
-plus que : les 3 catégories de chambres, le spa, le gym, et une photo
-d'ambiance/expérience client.
+**11 sur 13 sont déjà en ligne.** Il ne manque plus que : le gym et une
+photo d'ambiance/expérience client.
+
+> Vos dossiers "Rooms" contenaient aussi un 2e jeu de photos d'appartement
+> (`Apt 2`) — non utilisé pour l'instant (une seule photo par catégorie
+> suffit), mais conservé dans l'archive si vous voulez varier la galerie
+> plus tard.
 
 Les photos brutes originales (toutes les prises de vue, pas seulement
 celles retenues) sont conservées dans `photos-source/` à la racine du
