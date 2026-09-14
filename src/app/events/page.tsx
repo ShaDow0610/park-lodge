@@ -17,10 +17,16 @@ import PlaceholderPhoto from '@/components/PlaceholderPhoto';
 import MagneticButton from '@/components/MagneticButton';
 import ArcSignature from '@/components/ArcSignature';
 
+const TITLE = 'Meetings & Events';
+const DESCRIPTION =
+  'Conference venue and meeting facilities in Pretoria Central, Gauteng — suited to corporate travellers, government delegations and tour groups.';
+
 export const metadata: Metadata = {
-  title: 'Meetings & Events — The Park Lodge Hotel and Apartments',
-  description:
-    'Conference and event facilities in Pretoria Central, suited to corporate travellers, government delegations and tour groups.',
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: '/events' },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: '/events' },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const SUITED_FOR = [

@@ -2,9 +2,11 @@
 
 import { useRef } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import ArcMotif from './ArcMotif';
+import BreadcrumbSchema from './BreadcrumbSchema';
 
 type PageHeaderProps = {
   eyebrow: string;
@@ -25,6 +27,7 @@ export default function PageHeader({
   crumbLabel,
 }: PageHeaderProps) {
   const rootRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   useGSAP(
     () => {
@@ -56,6 +59,7 @@ export default function PageHeader({
       ref={rootRef}
       className="relative overflow-hidden bg-pine-950 pb-16 pt-[150px] text-ivory md:pb-20 md:pt-[170px]"
     >
+      <BreadcrumbSchema crumbLabel={crumbLabel} path={pathname} />
       <ArcMotif
         className="pgh-arc -top-[260px] -right-[220px]"
         size={620}

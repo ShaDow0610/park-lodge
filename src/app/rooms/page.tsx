@@ -14,10 +14,16 @@ import PlaceholderPhoto from '@/components/PlaceholderPhoto';
 import MagneticButton from '@/components/MagneticButton';
 import ArcSignature from '@/components/ArcSignature';
 
+const TITLE = 'Rooms & Suites';
+const DESCRIPTION =
+  'Standard Rooms, Executive Suites and Self-Catering Apartments at The Park Lodge, Pretoria Central — comfortable accommodation for business and leisure stays.';
+
 export const metadata: Metadata = {
-  title: 'Rooms & Suites — The Park Lodge Hotel and Apartments',
-  description:
-    'Standard Rooms, Executive Suites and Self-Catering Apartments at The Park Lodge, Pretoria Central.',
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: '/rooms' },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: '/rooms' },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const ROOMS = [

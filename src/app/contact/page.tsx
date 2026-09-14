@@ -8,10 +8,16 @@ import RevealOnScroll from '@/components/RevealOnScroll';
 import ContactForm from '@/components/ContactForm';
 import ArcSignature from '@/components/ArcSignature';
 
+const TITLE = 'Contact';
+const DESCRIPTION =
+  'Find The Park Lodge Hotel and Apartments in Pretoria Central, Gauteng — phone, WhatsApp and email details, or send an enquiry for stays, conference bookings or events.';
+
 export const metadata: Metadata = {
-  title: 'Contact — The Park Lodge Hotel and Apartments',
-  description:
-    'Find The Park Lodge in Pretoria Central, or send an enquiry for stays, conference bookings or events.',
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: '/contact' },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: '/contact' },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 export default function ContactPage() {

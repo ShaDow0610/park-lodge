@@ -16,10 +16,16 @@ import PlaceholderPhoto from '@/components/PlaceholderPhoto';
 import MagneticButton from '@/components/MagneticButton';
 import ArcSignature from '@/components/ArcSignature';
 
+const TITLE = 'Café on Park & Pool Bar';
+const DESCRIPTION =
+  'Breakfast, lunch and dinner at Café on Park, with poolside drinks at the Pool Bar — plus room service and conference catering, Pretoria Central.';
+
 export const metadata: Metadata = {
-  title: 'Café on Park & Pool Bar | The Park Lodge Hotel and Apartments',
-  description:
-    'Breakfast, lunch and dinner at Café on Park, with poolside drinks at the Pool Bar — plus room service and conference catering, Pretoria Central.',
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: '/dining' },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: '/dining' },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const HOURS = [

@@ -107,7 +107,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero.jpg"
-          alt=""
+          alt="The Park Lodge Hotel and Apartments — exterior view, Pretoria Central"
           fill
           priority
           sizes="100vw"

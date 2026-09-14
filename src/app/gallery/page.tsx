@@ -4,10 +4,16 @@ import RevealOnScroll from '@/components/RevealOnScroll';
 import PlaceholderPhoto from '@/components/PlaceholderPhoto';
 import MagneticButton from '@/components/MagneticButton';
 
+const TITLE = 'Gallery';
+const DESCRIPTION =
+  'A closer look at The Park Lodge Hotel and Apartments — exterior, lobby, rooms, Café on Park, conference venues, Pool Bar and guest experiences in Pretoria Central.';
+
 export const metadata: Metadata = {
-  title: 'Gallery — The Park Lodge Hotel and Apartments',
-  description:
-    'A closer look at The Park Lodge — exterior, lobby, rooms, Café on Park, conference venues, Pool Bar and guest experiences.',
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: '/gallery' },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: '/gallery' },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const GALLERY_ITEMS = [
