@@ -106,7 +106,7 @@ export default function Hero() {
       className="relative flex min-h-screen items-center overflow-hidden pb-20 pt-[120px]">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero.jpg"
+          src="https://images.pixieset.com/395496621/551f38385306debb9f51bd5a499ac22f-xxlarge.jpg"
           alt="The Park Lodge Hotel and Apartments — exterior view, Pretoria Central"
           fill
           priority

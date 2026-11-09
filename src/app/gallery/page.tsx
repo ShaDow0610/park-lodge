@@ -1,32 +1,63 @@
-import type { Metadata } from 'next';
-import PageHeader from '@/components/PageHeader';
-import RevealOnScroll from '@/components/RevealOnScroll';
-import PlaceholderPhoto from '@/components/PlaceholderPhoto';
-import MagneticButton from '@/components/MagneticButton';
+import type { Metadata } from "next";
+import PageHeader from "@/components/PageHeader";
+import RevealOnScroll from "@/components/RevealOnScroll";
+import PlaceholderPhoto from "@/components/PlaceholderPhoto";
+import MagneticButton from "@/components/MagneticButton";
 
-const TITLE = 'Gallery';
+const TITLE = "Gallery";
 const DESCRIPTION =
-  'A closer look at The Park Lodge Hotel and Apartments — exterior, lobby, rooms, Café on Park, conference venues, Pool Bar and guest experiences in Pretoria Central.';
+  "A closer look at The Park Lodge Hotel and Apartments — exterior, lobby, rooms, Café on Park, conference venues, Pool Bar and guest experiences in Pretoria Central.";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: '/gallery' },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: '/gallery' },
+  alternates: { canonical: "/gallery" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: "/gallery" },
   twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const GALLERY_ITEMS = [
-  { name: 'Hotel Exterior', big: true, src: '/images/hotel-exterior.jpg' },
-  { name: 'Lobby', src: '/images/lobby.jpg' },
-  { name: 'Rooms', src: '/images/room-deluxe.jpg' },
-  { name: 'Café on Park', src: '/images/cafe-on-park.jpg' },
-  { name: 'Conference Venues', src: '/images/conference-venue.jpg' },
-  { name: 'Pool', src: '/images/pool.jpg' },
-  { name: 'Pool Bar', src: '/images/pool-bar.jpg' },
-  { name: 'Spa', src: '/images/spa.jpg' },
-  { name: 'Gym', src: '/images/gym.jpg' },
-  { name: 'Guest Experiences', src: '/images/guest-experience.jpg' },
+  {
+    name: "Hotel Exterior",
+    big: true,
+    src: "https://images.pixieset.com/395496621/5928bef1380deaeaa19e35aec303764c-xxlarge.jpg",
+  },
+  {
+    name: "Lobby",
+    src: "https://images.pixieset.com/395496621/01ebf43d1d6aa660351c7feedfafea8c-xxlarge.jpg",
+  },
+  {
+    name: "Rooms",
+    src: "https://images.pixieset.com/395496621/762e36562f62ce5c08e131bb6494b77e-xxlarge.jpg",
+  },
+  {
+    name: "Café on Park",
+    src: "https://images.pixieset.com/395496621/656f72de858361baae761693ddbbc4dc-xxlarge.jpg",
+  },
+  {
+    name: "Conference Venues",
+    src: "https://images.pixieset.com/395496621/b8d969a42efb9747afcea722d1542e9f-xxlarge.jpg",
+  },
+  {
+    name: "Pool",
+    src: "https://images.pixieset.com/395496621/551f38385306debb9f51bd5a499ac22f-xxlarge.jpg",
+  },
+  {
+    name: "Pool Bar",
+    src: "https://images.pixieset.com/395496621/be8004a31013aa10f9bfb4b9e2995bbd-xxlarge.jpg",
+  },
+  {
+    name: "Spa",
+    src: "https://images.pixieset.com/395496621/0b205f6b38f52c5a0484f31561674904-xxlarge.jpg",
+  },
+  {
+    name: "Gym",
+    src: "https://images.pixieset.com/395496621/79e2686413d6803307dba41ad8178679-xxlarge.jpg",
+  },
+  {
+    name: "Guest Experiences",
+    src: "https://images.pixieset.com/395496621/23ca816faa4bfeabf1230af773ac6179-medium.jpg",
+  },
 ];
 
 export default function GalleryPage() {
@@ -45,8 +76,7 @@ export default function GalleryPage() {
             {GALLERY_ITEMS.map((item) => (
               <div
                 key={item.name}
-                className={`reveal ${item.big ? 'col-span-2 row-span-2' : ''}`}
-              >
+                className={`reveal ${item.big ? "col-span-2 row-span-2" : ""}`}>
                 <PlaceholderPhoto
                   src={item.src}
                   alt={item.src ? `${item.name}, The Park Lodge` : undefined}
@@ -68,13 +98,13 @@ export default function GalleryPage() {
               Like what you see?
             </h2>
             <p className="mt-3 max-w-[42ch] text-[15px] leading-relaxed text-ivory/70">
-              Check availability for your dates, or ask our reservations team any questions before you book.
+              Check availability for your dates, or ask our reservations team
+              any questions before you book.
             </p>
           </div>
           <MagneticButton
             href="/contact"
-            className="btn-shine reveal inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950"
-          >
+            className="btn-shine reveal inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950">
             Check Availability
           </MagneticButton>
         </RevealOnScroll>

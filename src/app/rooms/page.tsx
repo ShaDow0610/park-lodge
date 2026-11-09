@@ -1,5 +1,5 @@
-import type { Metadata } from 'next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import type { Metadata } from "next";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
   faWifi,
@@ -7,58 +7,58 @@ import {
   faSquareParking,
   faShirt,
   faDumbbell,
-} from '@fortawesome/free-solid-svg-icons';
-import PageHeader from '@/components/PageHeader';
-import RevealOnScroll from '@/components/RevealOnScroll';
-import PlaceholderPhoto from '@/components/PlaceholderPhoto';
-import MagneticButton from '@/components/MagneticButton';
-import ArcSignature from '@/components/ArcSignature';
+} from "@fortawesome/free-solid-svg-icons";
+import PageHeader from "@/components/PageHeader";
+import RevealOnScroll from "@/components/RevealOnScroll";
+import PlaceholderPhoto from "@/components/PlaceholderPhoto";
+import MagneticButton from "@/components/MagneticButton";
+import ArcSignature from "@/components/ArcSignature";
 
-const TITLE = 'Rooms & Suites';
+const TITLE = "Rooms & Suites";
 const DESCRIPTION =
-  'Standard, Deluxe and Executive rooms plus Self-Catering Apartments at The Park Lodge, Pretoria Central — comfortable accommodation for business and leisure stays.';
+  "Standard, Deluxe and Executive rooms plus Self-Catering Apartments at The Park Lodge, Pretoria Central — comfortable accommodation for business and leisure stays.";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: '/rooms' },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: '/rooms' },
+  alternates: { canonical: "/rooms" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: "/rooms" },
   twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const ROOMS = [
   {
-    name: 'Standard Room',
-    usp: 'A comfortable, well-appointed room for the business or leisure stay.',
-    fit: 'Best for short business trips and solo or couple stays.',
-    src: '/images/room-standard.jpg',
+    name: "Standard Room",
+    usp: "A comfortable, well-appointed room for the business or leisure stay.",
+    fit: "Best for short business trips and solo or couple stays.",
+    src: "https://images.pixieset.com/395496621/b621627c5292750347aeb96a83fe0a15-xxlarge.jpg",
   },
   {
-    name: 'Deluxe Room',
-    usp: 'A touch more comfort, with a dedicated desk for working on the road.',
-    fit: 'Best for guests who want extra polish without the step up to a suite.',
-    src: '/images/room-deluxe.jpg',
+    name: "Deluxe Room",
+    usp: "A touch more comfort, with a dedicated desk for working on the road.",
+    fit: "Best for guests who want extra polish without the step up to a suite.",
+    src: "https://images.pixieset.com/395496621/34cbe09b7eb1c1a06ef0b186b0f5523c-xxlarge.jpg",
   },
   {
-    name: 'Executive Suite',
-    usp: 'Extra space and a work area, suited to longer business stays.',
-    fit: 'Best for extended business travel and delegates who need room to work.',
-    src: '/images/room-executive.jpg',
+    name: "Executive Suite",
+    usp: "Extra space and a work area, suited to longer business stays.",
+    fit: "Best for extended business travel and delegates who need room to work.",
+    src: "https://images.pixieset.com/395496621/23c1202c30d35ded0c5663cfd71d6f3f-xxlarge.jpg",
   },
   {
-    name: 'Self-Catering Apartment',
-    usp: 'A kitchenette and living space, ideal for long-stay guests.',
-    fit: 'Best for relocating teams, month-long stays and travelling families.',
-    src: '/images/room-apartment.jpg',
+    name: "Self-Catering Apartment",
+    usp: "A kitchenette and living space, ideal for long-stay guests.",
+    fit: "Best for relocating teams, month-long stays and travelling families.",
+    src: "https://images.pixieset.com/395496621/fcc858fbfd01acef59640a397adc02f4-xxlarge.jpg",
   },
 ];
 
 const INCLUDED = [
-  { icon: faWifi, label: 'Complimentary Wi-Fi' },
-  { icon: faClock, label: '24-Hour Reception' },
-  { icon: faSquareParking, label: 'Underground Parking' },
-  { icon: faShirt, label: 'Guest Laundry' },
-  { icon: faDumbbell, label: 'Gym' },
+  { icon: faWifi, label: "Complimentary Wi-Fi" },
+  { icon: faClock, label: "24-Hour Reception" },
+  { icon: faSquareParking, label: "Underground Parking" },
+  { icon: faShirt, label: "Guest Laundry" },
+  { icon: faDumbbell, label: "Gym" },
 ];
 
 export default function RoomsPage() {
@@ -78,9 +78,8 @@ export default function RoomsPage() {
             <RevealOnScroll
               key={room.name}
               className={`grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16 ${
-                i % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''
-              }`}
-            >
+                i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
+              }`}>
               <div className="reveal">
                 <PlaceholderPhoto
                   src={room.src}
@@ -94,13 +93,14 @@ export default function RoomsPage() {
                 <span className="text-xs font-semibold uppercase tracking-[0.22em] text-brass-500">
                   Category 0{i + 1}
                 </span>
-                <h2 className="mt-3 font-serif text-[clamp(28px,3.4vw,40px)] text-ink-900">{room.name}</h2>
+                <h2 className="mt-3 font-serif text-[clamp(28px,3.4vw,40px)] text-ink-900">
+                  {room.name}
+                </h2>
                 <div className="mt-4 flex flex-wrap gap-2.5">
-                  {['Size TBC', 'Sleeps TBC', 'Bed config TBC'].map((spec) => (
+                  {["Size TBC", "Sleeps TBC", "Bed config TBC"].map((spec) => (
                     <span
                       key={spec}
-                      className="rounded-arc border border-line px-3.5 py-1.5 text-[11.5px] uppercase tracking-[0.05em] text-ink-600"
-                    >
+                      className="rounded-arc border border-line px-3.5 py-1.5 text-[11.5px] uppercase tracking-[0.05em] text-ink-600">
                       {spec}
                     </span>
                   ))}
@@ -108,14 +108,20 @@ export default function RoomsPage() {
                     Content pending
                   </span>
                 </div>
-                <p className="mt-6 max-w-[46ch] text-[16px] font-normal leading-[1.75] text-ink-600">{room.usp}</p>
-                <p className="mt-3 max-w-[46ch] text-sm italic text-ink-600/70">{room.fit}</p>
+                <p className="mt-6 max-w-[46ch] text-[16px] font-normal leading-[1.75] text-ink-600">
+                  {room.usp}
+                </p>
+                <p className="mt-3 max-w-[46ch] text-sm italic text-ink-600/70">
+                  {room.fit}
+                </p>
                 <MagneticButton
                   href="/contact"
-                  className="btn-shine group mt-8 inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950"
-                >
+                  className="btn-shine group mt-8 inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950">
                   Enquire About This Room
-                  <FontAwesomeIcon icon={faArrowRight} className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1"
+                  />
                 </MagneticButton>
               </div>
             </RevealOnScroll>
@@ -136,9 +142,16 @@ export default function RoomsPage() {
           </div>
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
             {INCLUDED.map((item) => (
-              <div key={item.label} className="reveal flex flex-col items-center gap-3.5 text-center">
-                <FontAwesomeIcon icon={item.icon} className="h-6 w-6 text-pine-800" />
-                <span className="text-[13px] font-medium text-ink-900">{item.label}</span>
+              <div
+                key={item.label}
+                className="reveal flex flex-col items-center gap-3.5 text-center">
+                <FontAwesomeIcon
+                  icon={item.icon}
+                  className="h-6 w-6 text-pine-800"
+                />
+                <span className="text-[13px] font-medium text-ink-900">
+                  {item.label}
+                </span>
               </div>
             ))}
           </div>
@@ -153,14 +166,13 @@ export default function RoomsPage() {
               Ready to check availability?
             </h2>
             <p className="mt-3 max-w-[42ch] text-[15px] leading-relaxed text-ivory/70">
-              Tell our reservations team your dates and preferred room category — they&rsquo;ll confirm rates and
-              availability directly.
+              Tell our reservations team your dates and preferred room category
+              — they&rsquo;ll confirm rates and availability directly.
             </p>
           </div>
           <MagneticButton
             href="/contact"
-            className="btn-shine reveal inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950"
-          >
+            className="btn-shine reveal inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950">
             Check Availability
           </MagneticButton>
         </RevealOnScroll>

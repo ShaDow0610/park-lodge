@@ -1,5 +1,5 @@
-import type { Metadata } from 'next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import type { Metadata } from "next";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
   faBuildingColumns,
@@ -10,37 +10,53 @@ import {
   faWifi,
   faSquareParking,
   faChalkboardUser,
-} from '@fortawesome/free-solid-svg-icons';
-import PageHeader from '@/components/PageHeader';
-import RevealOnScroll from '@/components/RevealOnScroll';
-import PlaceholderPhoto from '@/components/PlaceholderPhoto';
-import MagneticButton from '@/components/MagneticButton';
-import ArcSignature from '@/components/ArcSignature';
+} from "@fortawesome/free-solid-svg-icons";
+import PageHeader from "@/components/PageHeader";
+import RevealOnScroll from "@/components/RevealOnScroll";
+import PlaceholderPhoto from "@/components/PlaceholderPhoto";
+import MagneticButton from "@/components/MagneticButton";
+import ArcSignature from "@/components/ArcSignature";
 
-const TITLE = 'Meetings & Events';
+const TITLE = "Meetings & Events";
 const DESCRIPTION =
-  'Conference venue and meeting facilities in Pretoria Central, Gauteng — suited to corporate travellers, government delegations and tour groups.';
+  "Conference venue and meeting facilities in Pretoria Central, Gauteng — suited to corporate travellers, government delegations and tour groups.";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: '/events' },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: '/events' },
+  alternates: { canonical: "/events" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: "/events" },
   twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const SUITED_FOR = [
-  { icon: faBriefcase, label: 'Corporate Travellers' },
-  { icon: faBuildingColumns, label: 'Government Departments' },
-  { icon: faChalkboardUser, label: 'Conference Delegates' },
-  { icon: faBusSimple, label: 'Tour Groups' },
+  { icon: faBriefcase, label: "Corporate Travellers" },
+  { icon: faBuildingColumns, label: "Government Departments" },
+  { icon: faChalkboardUser, label: "Conference Delegates" },
+  { icon: faBusSimple, label: "Tour Groups" },
 ];
 
 const AVAILABLE = [
-  { icon: faUtensils, label: 'Conference Catering', desc: 'Dedicated catering coordinated with Café on Park.' },
-  { icon: faSquareParking, label: 'Underground Parking', desc: 'On-site parking for delegates and organisers.' },
-  { icon: faWifi, label: 'Complimentary Wi-Fi', desc: 'Connectivity throughout the venue.' },
-  { icon: faPeopleGroup, label: 'Group Accommodation', desc: 'Rooms and apartments for attending delegates.' },
+  {
+    icon: faUtensils,
+    label: "Conference Catering",
+    desc: "Dedicated catering coordinated with Café on Park.",
+  },
+  {
+    icon: faSquareParking,
+    label: "Underground Parking",
+    desc: "On-site parking for delegates and organisers.",
+  },
+  {
+    icon: faWifi,
+    label: "Complimentary Wi-Fi",
+    desc: "Connectivity throughout the venue.",
+  },
+  {
+    icon: faPeopleGroup,
+    label: "Group Accommodation",
+    desc: "Rooms and apartments for attending delegates.",
+  },
 ];
 
 export default function EventsPage() {
@@ -58,7 +74,7 @@ export default function EventsPage() {
         <RevealOnScroll className="mx-auto grid max-w-wrap grid-cols-1 items-center gap-14 px-8 md:grid-cols-2 md:gap-[70px]">
           <div className="reveal">
             <PlaceholderPhoto
-              src="/images/conference-venue.jpg"
+              src="https://images.pixieset.com/395496621/e1695ec66dff651c3d057a943fc01738-xxlarge.jpg"
               alt="Conference venue, The Park Lodge Hotel and Apartments"
               aspect="aspect-[4/5]"
               className="rounded-sm"
@@ -73,15 +89,15 @@ export default function EventsPage() {
               Space that adapts to your gathering
             </h2>
             <p className="mt-6 max-w-[46ch] text-[16px] font-normal leading-[1.75] text-ink-600">
-              From a small delegation briefing to a full-day conference, The Park Lodge hosts government, corporate
-              and group bookings in the heart of Pretoria Central.
+              From a small delegation briefing to a full-day conference, The
+              Park Lodge hosts government, corporate and group bookings in the
+              heart of Pretoria Central.
             </p>
             <div className="mt-6 flex flex-wrap gap-2.5">
-              {['Capacity TBC', 'Layouts TBC', 'Equipment TBC'].map((spec) => (
+              {["Capacity TBC", "Layouts TBC", "Equipment TBC"].map((spec) => (
                 <span
                   key={spec}
-                  className="rounded-arc border border-line px-3.5 py-1.5 text-[11.5px] uppercase tracking-[0.05em] text-ink-600"
-                >
+                  className="rounded-arc border border-line px-3.5 py-1.5 text-[11.5px] uppercase tracking-[0.05em] text-ink-600">
                   {spec}
                 </span>
               ))}
@@ -91,10 +107,12 @@ export default function EventsPage() {
             </div>
             <MagneticButton
               href="/contact"
-              className="btn-shine group mt-9 inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950"
-            >
+              className="btn-shine group mt-9 inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950">
               Request a Quote
-              <FontAwesomeIcon icon={faArrowRight} className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1"
+              />
             </MagneticButton>
           </div>
         </RevealOnScroll>
@@ -105,17 +123,25 @@ export default function EventsPage() {
         <div className="mx-auto max-w-wrap px-8">
           <RevealOnScroll className="reveal mb-12 flex flex-col items-center text-center">
             <ArcSignature />
-            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-sage-300">Who We Host</span>
-            <h2 className="mt-3 font-serif text-[clamp(26px,3vw,36px)] text-ivory">Suited for</h2>
+            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-sage-300">
+              Who We Host
+            </span>
+            <h2 className="mt-3 font-serif text-[clamp(26px,3vw,36px)] text-ivory">
+              Suited for
+            </h2>
           </RevealOnScroll>
           <RevealOnScroll className="grid grid-cols-2 gap-6 sm:grid-cols-4">
             {SUITED_FOR.map((item) => (
               <div
                 key={item.label}
-                className="reveal flex flex-col items-center gap-3.5 border border-line-light p-7 text-center transition-colors duration-300 hover:border-brass-300"
-              >
-                <FontAwesomeIcon icon={item.icon} className="h-6 w-6 text-brass-300" />
-                <span className="text-[13px] font-medium text-ivory">{item.label}</span>
+                className="reveal flex flex-col items-center gap-3.5 border border-line-light p-7 text-center transition-colors duration-300 hover:border-brass-300">
+                <FontAwesomeIcon
+                  icon={item.icon}
+                  className="h-6 w-6 text-brass-300"
+                />
+                <span className="text-[13px] font-medium text-ivory">
+                  {item.label}
+                </span>
               </div>
             ))}
           </RevealOnScroll>
@@ -138,11 +164,17 @@ export default function EventsPage() {
             {AVAILABLE.map((item) => (
               <div
                 key={item.label}
-                className="reveal flex flex-col gap-3.5 border-t-2 border-brass-500 bg-stone-50 p-8 transition-[transform,box-shadow] duration-500 ease-signature hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-24px_rgba(20,31,16,0.25)]"
-              >
-                <FontAwesomeIcon icon={item.icon} className="h-6 w-6 text-pine-800" />
-                <div className="font-serif text-lg text-ink-900">{item.label}</div>
-                <p className="text-[14px] font-normal leading-relaxed text-ink-600">{item.desc}</p>
+                className="reveal flex flex-col gap-3.5 border-t-2 border-brass-500 bg-stone-50 p-8 transition-[transform,box-shadow] duration-500 ease-signature hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-24px_rgba(20,31,16,0.25)]">
+                <FontAwesomeIcon
+                  icon={item.icon}
+                  className="h-6 w-6 text-pine-800"
+                />
+                <div className="font-serif text-lg text-ink-900">
+                  {item.label}
+                </div>
+                <p className="text-[14px] font-normal leading-relaxed text-ink-600">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </RevealOnScroll>
@@ -157,14 +189,13 @@ export default function EventsPage() {
               Tell us about your event
             </h2>
             <p className="mt-3 max-w-[42ch] text-[15px] leading-relaxed text-ink-600">
-              Share your expected numbers, dates and layout preferences — our team will confirm capacity, equipment
-              and catering.
+              Share your expected numbers, dates and layout preferences — our
+              team will confirm capacity, equipment and catering.
             </p>
           </div>
           <MagneticButton
             href="/contact"
-            className="btn-shine reveal inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950"
-          >
+            className="btn-shine reveal inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm bg-brass-500 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.08em] text-pine-950">
             Request a Quote
           </MagneticButton>
         </RevealOnScroll>
