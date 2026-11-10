@@ -1,3 +1,4 @@
+import { apartmentPhoto, deluxePhoto, executivePhoto, standardPhoto } from "@/lib/photos";
 import type { Metadata } from "next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -31,25 +32,25 @@ const ROOMS = [
     name: "Standard Room",
     usp: "A comfortable, well-appointed room for the business or leisure stay.",
     fit: "Best for short business trips and solo or couple stays.",
-    src: "https://images.pixieset.com/395496621/b621627c5292750347aeb96a83fe0a15-xxlarge.jpg",
+    src: standardPhoto,
   },
   {
     name: "Deluxe Room",
     usp: "A touch more comfort, with a dedicated desk for working on the road.",
     fit: "Best for guests who want extra polish without the step up to a suite.",
-    src: "https://images.pixieset.com/395496621/34cbe09b7eb1c1a06ef0b186b0f5523c-xxlarge.jpg",
+    src: deluxePhoto,
   },
   {
     name: "Executive Suite",
     usp: "Extra space and a work area, suited to longer business stays.",
     fit: "Best for extended business travel and delegates who need room to work.",
-    src: "https://images.pixieset.com/395496621/23c1202c30d35ded0c5663cfd71d6f3f-xxlarge.jpg",
+    src: executivePhoto,
   },
   {
     name: "Self-Catering Apartment",
     usp: "A kitchenette and living space, ideal for long-stay guests.",
     fit: "Best for relocating teams, month-long stays and travelling families.",
-    src: "https://images.pixieset.com/395496621/fcc858fbfd01acef59640a397adc02f4-xxlarge.jpg",
+    src: apartmentPhoto,
   },
 ];
 

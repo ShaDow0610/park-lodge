@@ -37,7 +37,7 @@ export default function RevealOnScroll({
         : descendants;
       if (!items.length) return;
 
-      gsap.set(items, { scale: 0.98 });
+      gsap.set(items, { opacity: 0, y: 28, scale: 0.98 });
 
       ScrollTrigger.batch(items, {
         start: 'top 88%',

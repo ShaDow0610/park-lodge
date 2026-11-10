@@ -1,4 +1,5 @@
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, CONTACT } from '@/lib/site-config';
+import { exteriorPhoto } from '@/lib/photos';
 
 /**
  * Site-wide JSON-LD (Hotel + amenities). Rendered once in the root layout.
@@ -18,7 +19,7 @@ export default function StructuredData() {
     name: SITE_NAME,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
-    image: `${SITE_URL}/images/hero.jpg`,
+    image: exteriorPhoto,
     telephone: CONTACT.telephone,
     email: CONTACT.email,
     address: {

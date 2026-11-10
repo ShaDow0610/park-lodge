@@ -11,6 +11,9 @@ npm run dev
 
 Puis ouvrir http://localhost:3000
 
+`npm run build` et `npm start` utilisent `.next-production/`, séparé du
+dossier `.next/` de développement pour éviter les conflits avec `npm run dev`.
+
 ## Structure
 
 ```
@@ -36,14 +39,14 @@ src/
     ArcMotif.tsx           → motif d'arc décoratif (issu du logo)
 ```
 
-## Remplacer les images placeholder
+## Photos et optimisation
 
-Toutes les zones photo utilisent `<PlaceholderPhoto />` pour l'instant (dégradé
-pine/sage + arc + libellé), en attendant les vraies photos. Pour les
-remplacer :
-
-1. Déposer les fichiers dans `public/images/`
-2. Remplacer `<PlaceholderPhoto ... />` par un composant Next `<Image src="/images/xxx.jpg" ... />`
+Les photos proviennent exclusivement de Pixieset. Leurs liens sont regroupés
+dans `src/lib/photos.ts` ; aucun fichier photo local n'est utilisé.
+Next Image adapte la résolution à l'écran, compresse les images et les met
+en cache pendant au moins 24 heures. Le hero est chargé en priorité et les
+autres photos à la demande. Les proportions réservées évitent les décalages
+de mise en page pendant le chargement.
 
 ## Design tokens
 

@@ -1,3 +1,4 @@
+import { apartmentPhoto, cafePhoto, deluxePhoto, executivePhoto, exteriorPhoto, lobbyPhoto, poolBarPhoto, poolPhoto, standardPhoto } from "@/lib/photos";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -67,22 +68,22 @@ const ROOMS = [
   {
     name: "Standard Room",
     usp: "A comfortable, well-appointed room for the business or leisure stay.",
-    src: "https://images.pixieset.com/395496621/b621627c5292750347aeb96a83fe0a15-xxlarge.jpg",
+    src: standardPhoto,
   },
   {
     name: "Deluxe Room",
     usp: "A touch more comfort, with a dedicated desk for working on the road.",
-    src: "https://images.pixieset.com/395496621/34cbe09b7eb1c1a06ef0b186b0f5523c-xxlarge.jpg",
+    src: deluxePhoto,
   },
   {
     name: "Executive Suite",
     usp: "Extra space and a work area, suited to longer business stays.",
-    src: "https://images.pixieset.com/395496621/23c1202c30d35ded0c5663cfd71d6f3f-xxlarge.jpg",
+    src: executivePhoto,
   },
   {
     name: "Self-Catering Apartment",
     usp: "A kitchenette and living space, ideal for long-stay guests.",
-    src: "https://images.pixieset.com/395496621/fcc858fbfd01acef59640a397adc02f4-xxlarge.jpg",
+    src: apartmentPhoto,
   },
 ];
 
@@ -122,23 +123,23 @@ const FACILITIES = [
 const GALLERY_PREVIEW = [
   {
     name: "Hotel Exterior",
-    src: "https://images.pixieset.com/395496621/b3092f76c653fd1b302fd9f9b3e72d56-xxlarge.jpg",
+    src: exteriorPhoto,
   },
   {
     name: "Lobby",
-    src: "https://images.pixieset.com/395496621/e463a16bd724305068a889bd414017be-xxlarge.jpg",
+    src: lobbyPhoto,
   },
   {
     name: "Rooms",
-    src: "https://images.pixieset.com/395496621/762e36562f62ce5c08e131bb6494b77e-xxlarge.jpg",
+    src: standardPhoto,
   },
   {
     name: "Café on Park",
-    src: "https://images.pixieset.com/395496621/656f72de858361baae761693ddbbc4dc-xxlarge.jpg",
+    src: cafePhoto,
   },
   {
     name: "Pool",
-    src: "https://images.pixieset.com/395496621/551f38385306debb9f51bd5a499ac22f-xxlarge.jpg",
+    src: poolPhoto,
   },
 ];
 
@@ -177,7 +178,7 @@ export default function HomePage() {
         <RevealOnScroll className="mx-auto grid max-w-wrap grid-cols-1 items-center gap-14 px-8 md:grid-cols-[0.9fr_1.1fr] md:gap-[72px]">
           <div className="reveal">
             <PlaceholderPhoto
-              src="/images/hotel-exterior.jpg"
+              src={exteriorPhoto}
               alt="The Park Lodge Hotel and Apartments — entrance, Pretoria Central"
               label="Hotel Exterior"
               aspect="aspect-[4/5]"
@@ -285,6 +286,7 @@ export default function HomePage() {
                   className="reveal md:w-[min(38vw,420px)] md:shrink-0">
                   <PlaceholderPhoto
                     src={room.src}
+                    sizes="(max-width: 767px) calc(100vw - 64px), (max-width: 1105px) 38vw, 420px"
                     alt={`${room.name}, The Park Lodge Hotel and Apartments`}
                     label={room.name}
                     aspect="aspect-[4/5]"
@@ -351,7 +353,7 @@ export default function HomePage() {
           </div>
           <div className="reveal">
             <PlaceholderPhoto
-              src="/images/cafe-on-park.jpg"
+              src={cafePhoto}
               alt="Café on Park restaurant, The Park Lodge"
               aspect="aspect-square"
             />
@@ -384,7 +386,7 @@ export default function HomePage() {
           </div>
           <div className="reveal md:order-1">
             <PlaceholderPhoto
-              src="/images/pool-bar.jpg"
+              src={poolBarPhoto}
               alt="Pool Bar, The Park Lodge"
               aspect="aspect-square"
               variant="light"
@@ -492,6 +494,7 @@ export default function HomePage() {
               <div key={item.name} className="reveal">
                 <PlaceholderPhoto
                   src={item.src}
+                  sizes="(max-width: 767px) 50vw, (max-width: 1179px) 20vw, 212px"
                   alt={item.src ? `${item.name}, The Park Lodge` : undefined}
                   label={item.name}
                   aspect="aspect-[4/5]"

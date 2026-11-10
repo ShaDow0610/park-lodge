@@ -11,9 +11,9 @@ type PlaceholderPhotoProps = {
   variant?: 'dark' | 'light';
   className?: string;
   aspect?: string;
-  /** Real photo path (e.g. "/images/lobby.jpg"). When set, renders the actual
-   * image instead of the brand-styled gradient block. */
+  /** Pixieset URL, optimised and cached by Next Image. */
   src?: string;
+  sizes?: string;
   /** Required alongside `src` — descriptive alt text for SEO/accessibility. */
   alt?: string;
   priority?: boolean;
@@ -34,6 +34,7 @@ export default function PlaceholderPhoto({
   src,
   alt,
   priority = false,
+  sizes = '(max-width: 767px) calc(100vw - 64px), (max-width: 1199px) 50vw, 600px',
 }: PlaceholderPhotoProps) {
   const isLight = variant === 'light';
 
@@ -45,7 +46,8 @@ export default function PlaceholderPhoto({
           alt={alt || label || ''}
           fill
           priority={priority}
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes={sizes}
+          quality={70}
           className="object-cover transition-transform duration-[1200ms] ease-signature group-hover:scale-105"
         />
         <span

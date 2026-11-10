@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import StickyBookBar from '@/components/StickyBookBar';
 import StructuredData from '@/components/StructuredData';
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from '@/lib/site-config';
+import { exteriorPhoto } from '@/lib/photos';
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -55,9 +56,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: '/images/hero.jpg',
-        width: 2560,
-        height: 1707,
+        url: exteriorPhoto,
         alt: `${SITE_NAME} — exterior view`,
       },
     ],
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${SITE_NAME} — Pretoria Central`,
     description: SITE_DESCRIPTION,
-    images: ['/images/hero.jpg'],
+    images: [exteriorPhoto],
   },
   robots: {
     index: true,

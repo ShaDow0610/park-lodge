@@ -1,3 +1,4 @@
+import { conferencePhoto } from "@/lib/photos";
 import type { Metadata } from "next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -74,7 +75,7 @@ export default function EventsPage() {
         <RevealOnScroll className="mx-auto grid max-w-wrap grid-cols-1 items-center gap-14 px-8 md:grid-cols-2 md:gap-[70px]">
           <div className="reveal">
             <PlaceholderPhoto
-              src="https://images.pixieset.com/395496621/e1695ec66dff651c3d057a943fc01738-xxlarge.jpg"
+              src={conferencePhoto}
               alt="Conference venue, The Park Lodge Hotel and Apartments"
               aspect="aspect-[4/5]"
               className="rounded-sm"

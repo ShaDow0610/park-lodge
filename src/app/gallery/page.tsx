@@ -1,3 +1,4 @@
+import { cafePhoto, conferencePhoto, exteriorPhoto, gymPhoto, lobbyPhoto, poolBarPhoto, poolPhoto, restaurantPhoto, spaPhoto, standardPhoto } from "@/lib/photos";
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import RevealOnScroll from "@/components/RevealOnScroll";
@@ -20,43 +21,43 @@ const GALLERY_ITEMS = [
   {
     name: "Hotel Exterior",
     big: true,
-    src: "https://images.pixieset.com/395496621/5928bef1380deaeaa19e35aec303764c-xxlarge.jpg",
+    src: exteriorPhoto,
   },
   {
     name: "Lobby",
-    src: "https://images.pixieset.com/395496621/01ebf43d1d6aa660351c7feedfafea8c-xxlarge.jpg",
+    src: lobbyPhoto,
   },
   {
     name: "Rooms",
-    src: "https://images.pixieset.com/395496621/762e36562f62ce5c08e131bb6494b77e-xxlarge.jpg",
+    src: standardPhoto,
   },
   {
     name: "Café on Park",
-    src: "https://images.pixieset.com/395496621/656f72de858361baae761693ddbbc4dc-xxlarge.jpg",
+    src: cafePhoto,
   },
   {
     name: "Conference Venues",
-    src: "https://images.pixieset.com/395496621/b8d969a42efb9747afcea722d1542e9f-xxlarge.jpg",
+    src: conferencePhoto,
   },
   {
     name: "Pool",
-    src: "https://images.pixieset.com/395496621/551f38385306debb9f51bd5a499ac22f-xxlarge.jpg",
+    src: poolPhoto,
   },
   {
     name: "Pool Bar",
-    src: "https://images.pixieset.com/395496621/be8004a31013aa10f9bfb4b9e2995bbd-xxlarge.jpg",
+    src: poolBarPhoto,
   },
   {
     name: "Spa",
-    src: "https://images.pixieset.com/395496621/0b205f6b38f52c5a0484f31561674904-xxlarge.jpg",
+    src: spaPhoto,
   },
   {
     name: "Gym",
-    src: "https://images.pixieset.com/395496621/79e2686413d6803307dba41ad8178679-xxlarge.jpg",
+    src: gymPhoto,
   },
   {
     name: "Guest Experiences",
-    src: "https://images.pixieset.com/395496621/23ca816faa4bfeabf1230af773ac6179-medium.jpg",
+    src: restaurantPhoto,
   },
 ];
 
@@ -67,7 +68,7 @@ export default function GalleryPage() {
         eyebrow="Gallery"
         title="A closer look"
         crumbLabel="Gallery"
-        description="Full galleries for exterior, lobby, rooms, Café on Park, conference venues, Pool Bar and guest experiences will replace these placeholders once photography is delivered."
+        description="Explore the rooms, dining spaces, pool and conference venues at The Park Lodge."
       />
 
       <section className="bg-stone-50 py-24 md:py-[110px]">
@@ -79,6 +80,9 @@ export default function GalleryPage() {
                 className={`reveal ${item.big ? "col-span-2 row-span-2" : ""}`}>
                 <PlaceholderPhoto
                   src={item.src}
+                  sizes={item.big
+                    ? '(max-width: 639px) calc(100vw - 64px), (max-width: 767px) 66vw, (max-width: 1179px) 50vw, 550px'
+                    : '(max-width: 639px) 50vw, (max-width: 767px) 33vw, (max-width: 1179px) 25vw, 270px'}
                   alt={item.src ? `${item.name}, The Park Lodge` : undefined}
                   label={item.name}
                   aspect=""

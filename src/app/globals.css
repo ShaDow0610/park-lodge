@@ -90,10 +90,9 @@ h3,
   stroke-dashoffset: 100;
 }
 
-/* Scroll-reveal base state (GSAP fades these in — see RevealOnScroll) */
+/* Visible by default; RevealOnScroll prepares animations only when JS runs. */
 .reveal {
-  opacity: 0;
-  transform: translateY(28px);
+  opacity: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
