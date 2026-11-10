@@ -14,6 +14,10 @@ Puis ouvrir http://localhost:3000
 `npm run build` et `npm start` utilisent `.next-production/`, séparé du
 dossier `.next/` de développement pour éviter les conflits avec `npm run dev`.
 
+Sur Netlify, `netlify.toml` définit la commande de build et le dossier de
+publication `.next-production/`, qui doit correspondre à `distDir` dans
+`next.config.mjs`.
+
 ## Structure
 
 ```
